@@ -38,9 +38,6 @@ Important Remark: Not all function where tested to work with Python 3 yet.
 Acknowledgements
 ----------------
 *   The ZEN Reserach & Developemt Team
-*   Christoph Gohlke from providing the czifile.py and tifffile.py.
-*   The Cellprofiler team for providing python-bioformats.
-*   The OME people for creating BioFormats.
 
 References
 ----------
@@ -48,21 +45,19 @@ References
      http://www.zeiss.com/czi
 (2)  The OME-TIFF format.
      http://www.openmicroscopy.org/site/support/file-formats/ome-tiff
-(3)  Read microscopy images to numpy array with python-bioformats.
-     http://ilovesymposia.com/2014/08/10/read-microscopy-images-to-numpy-arrays-with-python-bioformats/
 
 Screenshots
 -----------
 
-.. figure:: images/BFRead_Test.png
+.. figure:: images/Guided_Acquisition.png
    :align: center
    :alt:
 
-.. figure:: images/OME-XML_output.png
+.. figure:: images/Guided_Acquisition_Workflow.png
    :align: center
    :alt:
 
-.. figure:: images/testwell96_planetable_XYZ-Pos.png
+.. figure:: images/Guided_Acquisition_schematic.png
    :align: center
    :alt:
 
