@@ -1,17 +1,15 @@
 ==================================
-BioFormatsRead - Scripts and Tools
+ZEN Blue OAD Workshop
 ==================================
 
-This collection of scripts can be used to read image data using BioFormats into numpy arrays.
-It was initially created to simplify reading CZI image files, but should work with many more
-image data files thanks to BioFormats.
+OAD and Automated Microscopy – Smart Acquisition Strategies and Automation Tools
+ZEN Blue is an open, flexible and powerful image acquisition platform that allows controlling a wide range of microscopes system. Additionally it offers various tools to automate workflows including acquisition and image analysis tasks. Since that linkage and the automation of such workflows becomes increasingly ZENTo fulfill those demands the ZEN Blue platform offers various features and options, which are combined inside a concept called Open Application Development (OAD). It main components are:
 
-The main scripts are:
-
-*   bftools.py
-*   czitools.py
-*   misctools.py
-*   czifile.py
+*    Open CZI image data format
+*    Python Scripting
+*    Interfaces to ZEN
+*    Experiment Feedback   
+The workshop will give an overview about the various options and use cases allowing the user to start automating their workflows. Different examples will be explained in detail and during hands-on sessions.
 
 :Author: Sebastian Rhode
 
@@ -44,6 +42,7 @@ Important Remark: Not all function where tested to work with Python 3 yet.
 
 Acknowledgements
 ----------------
+*   The ZEN Reserach & Developemt Team
 *   Christoph Gohlke from providing the czifile.py and tifffile.py.
 *   The Cellprofiler team for providing python-bioformats.
 *   The OME people for creating BioFormats.
@@ -56,14 +55,6 @@ References
      http://www.openmicroscopy.org/site/support/file-formats/ome-tiff
 (3)  Read microscopy images to numpy array with python-bioformats.
      http://ilovesymposia.com/2014/08/10/read-microscopy-images-to-numpy-arrays-with-python-bioformats/
-
-Additional Tools
-----------------
-*   Read image series, z-stacks, time series or single planes.
-*   Retrieve all important meta-information.
-*   Write OME-XML Metadata to XML file.
-*   Display XYZ data from PlaneTable.
-*   Extract Well Information form Scenes (CZI only).
 
 Screenshots
 -----------
