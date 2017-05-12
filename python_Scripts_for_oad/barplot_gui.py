@@ -68,29 +68,29 @@ class MyGUI(QtGui.QDialog):
             ct = 0.0
         # check if the time is bigger than the last one
         if ct > self.ct_last:
-            
+
             # read the actual data and store them into pandas data frame
             df = pd.read_csv(filename, sep='\t', header=0)
-            
+
             # do some stats and normalization on the data
             df['area_t_norm'] = df['area_t']/df['area_t'].max()
             df['area_p_norm'] = df['area_p']/df['area_p'].max()*100
-              
+
             # read first value of area_p_norm to be used a reference
             area_p_ref = df['area_p_norm'][0]
-            
-            # calculate the difference relative to the 1st data point last datapoint 
+
+            # calculate the difference relative to the 1st data point last datapoint
             df['area_p_delta'] = df['area_p_norm'] - area_p_ref
-            
-            # calculate the difference relative to the previous data point 
+
+            # calculate the difference relative to the previous data point
             df['area_p_delta_diff'] = df['area_p_delta'].diff()
-            
-            try:              
-                # do the plot using columns from the dataframe 
+
+            try:
+                # do the plot using columns from the dataframe
                 self.ax1 = sns.barplot(x='frame', y='area_p_delta', palette='Blues_d', data=df, ax=self.ax1)
                 #self.ax1 = sns.barplot(x='frame', y='area_p_norm', palette='Blues_d', data=df, ax=self.ax1)
                 self.ax2 = sns.barplot(x='frame', y='area_p_delta_diff', palette='BuGn_d', data=df, ax=self.ax2)
-                
+
                 # update the plot and the time since the last modification
                 self.figure_widget.draw()
                 self.ct_last = ct
@@ -109,7 +109,8 @@ class MyGUI(QtGui.QDialog):
             self.figure_widget.draw()
             # save figure before closing
             time.sleep(5)
-            self.figure_widget.figure.savefig(savename)
+            if saveopt == True:
+                self.figure_widget.figure.savefig(savename)
             sys.exit()
 
 ###############################################################################
@@ -131,16 +132,16 @@ if __name__ == "__main__":
 
     # get the arguments
     args = parser.parse_args()
-    
+
     filename = args.filename
     print('Datalog Filename: ', args.filename)
-    
+
     saveopt = args.saveoption
     print('SaveOption : ', saveopt)
     if saveopt == True:
         savename = filename[:-4] + '.png'
         print('Savename: ', savename)
-        
+
     frequency = np.float(args.frequency)
     print('Update Frequency [s]: ', frequency)
 
