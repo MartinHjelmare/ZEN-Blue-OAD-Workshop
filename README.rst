@@ -17,7 +17,7 @@ The workshop will give an overview about the various options and use cases allow
 Requirements
 ----------------------
 * `ZEN Blue 2.3 <https://www.zeiss.com/microscopy/int/products/microscope-software/zen.html>`_
-* `Python 3 (optional) <http://www.python.org>`_
+* `Python 3.5.2 (optional) <http://www.python.org>`_
 * `BioFormatsRead Scripts (optional) <https://github.com/sebi06/BioFormatsRead>`_
 * `MATLAB (optional) <https://www.mathworks.com/products/matlab.html>`_
 
