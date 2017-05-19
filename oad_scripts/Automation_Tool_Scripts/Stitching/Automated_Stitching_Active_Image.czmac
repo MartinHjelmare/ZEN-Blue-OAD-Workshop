@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Script Version="1.0">
+  <Language>Python</Language>
+  <Text># Run Stitching automatically after acquisition
+# Script by Sven Terclavers - Sven.Terclavers@zeiss.com
+
+from System.IO import File, Directory, FileInfo, Path
+
+image = Zen.Application.Documents.ActiveDocument
+
+Stitchset = r'Stitching_Channel_1.czips'
+functionsetting1 = Zen.Processing.Transformation.Geometric.Stitching(image)
+functionsetting1.Load(Stitchset)
+
+# End
+</Text>
+  <Author></Author>
+  <Description></Description>
+  <ApplicationName></ApplicationName>
+  <Keywords></Keywords>
+  <Row>1</Row>
+  <Column>5</Column>
+</Script>
