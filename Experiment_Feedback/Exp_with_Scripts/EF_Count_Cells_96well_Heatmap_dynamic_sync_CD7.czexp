@@ -1,0 +1,2815 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HardwareExperiment Version="1.1">
+  <RunMode>ValidateAndAdaptBeforePerformEnabled,OptimizeBeforePerformEnabled</RunMode>
+  <BeforeHardwareSetting>Before [DAPI]</BeforeHardwareSetting>
+  <AfterHardwareSetting>After [DAPI]</AfterHardwareSetting>
+  <ExperimentBlockIndex>0</ExperimentBlockIndex>
+  <IsSegmented>false</IsSegmented>
+  <IsStandardMode>true</IsStandardMode>
+  <ImageTransferMode>MemoryMappedAndFileStream</ImageTransferMode>
+  <AutoSave IsActivated="false" EnableSingleFileSave="false">
+    <StorageFolder>C:\Users\M1SRH\Documents\Testdata_Zeiss\Zen_Output</StorageFolder>
+    <Name></Name>
+    <IsAutoSubFolder>true</IsAutoSubFolder>
+    <IsAutoSubFolderExternal>true</IsAutoSubFolderExternal>
+    <IsClosedOnCompletion>false</IsClosedOnCompletion>
+    <SingleFileSaveFormat>TIFF</SingleFileSaveFormat>
+    <ConvertTo8Bit>false</ConvertTo8Bit>
+    <AddXmlMetadata>false</AddXmlMetadata>
+    <ApplyDisplayMappings>false</ApplyDisplayMappings>
+    <SaveOriginalData>true</SaveOriginalData>
+    <UseChannelNames>false</UseChannelNames>
+    <Quality>100</Quality>
+    <CompressionMethod></CompressionMethod>
+    <SingleFileSaveDestinationFolder>C:\Users\M1SRH\Pictures</SingleFileSaveDestinationFolder>
+    <DimensionsForSeparateFolders>-C;-T;-Z;-S</DimensionsForSeparateFolders>
+  </AutoSave>
+  <Scripting IsActivated="false">
+    <RunMacroBeforeExperiment>false</RunMacroBeforeExperiment>
+    <MacroBeforeExperiment></MacroBeforeExperiment>
+    <ErrorActionBeforeExperiment>ErrorAction_Continue</ErrorActionBeforeExperiment>
+    <RunMacroAfterExperiment>false</RunMacroAfterExperiment>
+    <MacroAfterExperiment></MacroAfterExperiment>
+    <ErrorActionAfterExperiment>ErrorAction_Continue</ErrorActionAfterExperiment>
+  </Scripting>
+  <BlockExecutionOrder>1</BlockExecutionOrder>
+  <LoopDefinitions />
+  <ExperimentBlocks>
+    <AcquisitionBlock IsActivated="true" BlockReference="634853802760315218">
+      <RunMode>ComponentUpdateEnabled,StateUpdateEnabled</RunMode>
+      <SubDimensionSetups>
+        <RegionsSetup IsActivated="true">
+          <SampleHolder>
+            <Overlap>0.1</Overlap>
+            <ScanMode>Meander</ScanMode>
+            <PositionedRegionsScanMode>FirstYThenX</PositionedRegionsScanMode>
+            <TemplateShapesScanMode>Meander</TemplateShapesScanMode>
+            <IsConstantTiles>false</IsConstantTiles>
+            <TileRegionAnchorMode>Center</TileRegionAnchorMode>
+            <StageReferencePoint>0,0</StageReferencePoint>
+            <UseStageBacklashCorrection>true</UseStageBacklashCorrection>
+            <UseFocusBacklashCorrection>true</UseFocusBacklashCorrection>
+            <IsOptimizedPositionedRegionsSorting>true</IsOptimizedPositionedRegionsSorting>
+            <IsOptimizedTemplateShapesSorting>true</IsOptimizedTemplateShapesSorting>
+            <UseStageContinualSpeed>true</UseStageContinualSpeed>
+            <StageContinualSpeed>0.5</StageContinualSpeed>
+            <MoveToLoadPositionBetweenShapes>false</MoveToLoadPositionBetweenShapes>
+            <SplitScenesInSeparateFiles>false</SplitScenesInSeparateFiles>
+            <TileRegionCoveringMode>AlignedToLocalTileRegion</TileRegionCoveringMode>
+            <TemplateShapesFillMode>PredefinedSize</TemplateShapesFillMode>
+            <TemplateShapesFillGrade>1</TemplateShapesFillGrade>
+            <TemplateShapesFillWidth>7250</TemplateShapesFillWidth>
+            <TemplateShapesFillHeight>7250</TemplateShapesFillHeight>
+            <IsOnlineStitchingEnabled>false</IsOnlineStitchingEnabled>
+            <IsOnlinePyramidEnabled>true</IsOnlinePyramidEnabled>
+            <GlobalInterpolationExpansionDegree>1</GlobalInterpolationExpansionDegree>
+            <LocalInterpolationExpansionDegree>1</LocalInterpolationExpansionDegree>
+            <IsFocusSurfaceOutlierRemovingEnabled>true</IsFocusSurfaceOutlierRemovingEnabled>
+            <FocusSurfaceOutlierExpansionDegree>0</FocusSurfaceOutlierExpansionDegree>
+            <FocusSurfaceOutlierThresholdSigma>1</FocusSurfaceOutlierThresholdSigma>
+            <DelayAfterStageMove>0</DelayAfterStageMove>
+            <OnlineStitchingParameter>
+              <UseFocusReferenceChannel>true</UseFocusReferenceChannel>
+              <ReferenceChannelId>0</ReferenceChannelId>
+            </OnlineStitchingParameter>
+            <AllowedScanArea IsActivated="false">
+              <ContourType>Rectangle</ContourType>
+              <Center>0,0</Center>
+              <Size>0,0</Size>
+            </AllowedScanArea>
+            <TileRegions />
+            <SingleTileRegions />
+            <SingleTileRegionArrays>
+              <SingleTileRegionArray Name="A1" Id="635676389335223135">
+                <CenterX>4500</CenterX>
+                <CenterY>8500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>1-1</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389335683181">
+                    <X>4500</X>
+                    <Y>8500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="A2" Id="635676389336173231">
+                <CenterX>13500</CenterX>
+                <CenterY>8500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>1-2</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389336173231">
+                    <X>13500</X>
+                    <Y>8500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="A3" Id="635676389336553270">
+                <CenterX>22500</CenterX>
+                <CenterY>8500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>1-3</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389336553270">
+                    <X>22500</X>
+                    <Y>8500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="A4" Id="635676389336873303">
+                <CenterX>31500</CenterX>
+                <CenterY>8500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>1-4</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389336873303">
+                    <X>31500</X>
+                    <Y>8500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="A5" Id="635676389337243341">
+                <CenterX>40500</CenterX>
+                <CenterY>8500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>1-5</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389337243341">
+                    <X>40500</X>
+                    <Y>8500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="A6" Id="635676389337643382">
+                <CenterX>49500</CenterX>
+                <CenterY>8500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>1-6</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389337653383">
+                    <X>49500</X>
+                    <Y>8500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="A7" Id="635676389338013420">
+                <CenterX>58500</CenterX>
+                <CenterY>8500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>1-7</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389338023421">
+                    <X>58500</X>
+                    <Y>8500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="A8" Id="635676389338103430">
+                <CenterX>67500</CenterX>
+                <CenterY>8500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>1-8</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389338103430">
+                    <X>67500</X>
+                    <Y>8500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="A9" Id="635676389338353456">
+                <CenterX>76500</CenterX>
+                <CenterY>8500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>1-9</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389338353456">
+                    <X>76500</X>
+                    <Y>8500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="A10" Id="635676389339993621">
+                <CenterX>85500</CenterX>
+                <CenterY>8500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>1-10</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389339993621">
+                    <X>85500</X>
+                    <Y>8500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="A11" Id="635676389341773800">
+                <CenterX>94500</CenterX>
+                <CenterY>8500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>1-11</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389341773800">
+                    <X>94500</X>
+                    <Y>8500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="A12" Id="635676389341863810">
+                <CenterX>103500</CenterX>
+                <CenterY>8500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>1-12</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389341863810">
+                    <X>103500</X>
+                    <Y>8500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="B1" Id="635676389341943819">
+                <CenterX>4500</CenterX>
+                <CenterY>17500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>2-1</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389341943819">
+                    <X>4500</X>
+                    <Y>17500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="B2" Id="635676389342043830">
+                <CenterX>13500</CenterX>
+                <CenterY>17500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>2-2</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389342043830">
+                    <X>13500</X>
+                    <Y>17500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="B3" Id="635676389342293856">
+                <CenterX>22500</CenterX>
+                <CenterY>17500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>2-3</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389342293856">
+                    <X>22500</X>
+                    <Y>17500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="B4" Id="635676389342383866">
+                <CenterX>31500</CenterX>
+                <CenterY>17500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>2-4</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389342383866">
+                    <X>31500</X>
+                    <Y>17500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="B5" Id="635676389342483877">
+                <CenterX>40500</CenterX>
+                <CenterY>17500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>2-5</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389342483877">
+                    <X>40500</X>
+                    <Y>17500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="B6" Id="635676389342573887">
+                <CenterX>49500</CenterX>
+                <CenterY>17500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>2-6</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389342573887">
+                    <X>49500</X>
+                    <Y>17500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="B7" Id="635676389342663897">
+                <CenterX>58500</CenterX>
+                <CenterY>17500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>2-7</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389342663897">
+                    <X>58500</X>
+                    <Y>17500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="B8" Id="635676389342743906">
+                <CenterX>67500</CenterX>
+                <CenterY>17500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>2-8</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389342743906">
+                    <X>67500</X>
+                    <Y>17500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="B9" Id="635676389342873920">
+                <CenterX>76500</CenterX>
+                <CenterY>17500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>2-9</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389342873920">
+                    <X>76500</X>
+                    <Y>17500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="B10" Id="635676389342933927">
+                <CenterX>85500</CenterX>
+                <CenterY>17500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>2-10</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389342933927">
+                    <X>85500</X>
+                    <Y>17500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="B11" Id="635676389343003935">
+                <CenterX>94500</CenterX>
+                <CenterY>17500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>2-11</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389343003935">
+                    <X>94500</X>
+                    <Y>17500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="B12" Id="635676389343083944">
+                <CenterX>103500</CenterX>
+                <CenterY>17500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>2-12</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389343083944">
+                    <X>103500</X>
+                    <Y>17500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="C1" Id="635676389343153952">
+                <CenterX>4500</CenterX>
+                <CenterY>26500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>3-1</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389343153952">
+                    <X>4500</X>
+                    <Y>26500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="C2" Id="635676389343223960">
+                <CenterX>13500</CenterX>
+                <CenterY>26500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>3-2</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389343223960">
+                    <X>13500</X>
+                    <Y>26500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="C3" Id="635676389343303969">
+                <CenterX>22500</CenterX>
+                <CenterY>26500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>3-3</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389343303969">
+                    <X>22500</X>
+                    <Y>26500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="C4" Id="635676389343373977">
+                <CenterX>31500</CenterX>
+                <CenterY>26500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>3-4</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389343373977">
+                    <X>31500</X>
+                    <Y>26500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="C5" Id="635676389343493990">
+                <CenterX>40500</CenterX>
+                <CenterY>26500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>3-5</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389343493990">
+                    <X>40500</X>
+                    <Y>26500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="C6" Id="635676389343563998">
+                <CenterX>49500</CenterX>
+                <CenterY>26500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>3-6</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389343563998">
+                    <X>49500</X>
+                    <Y>26500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="C7" Id="635676389343654008">
+                <CenterX>58500</CenterX>
+                <CenterY>26500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>3-7</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389343654008">
+                    <X>58500</X>
+                    <Y>26500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="C8" Id="635676389343734017">
+                <CenterX>67500</CenterX>
+                <CenterY>26500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>3-8</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389343734017">
+                    <X>67500</X>
+                    <Y>26500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="C9" Id="635676389343814026">
+                <CenterX>76500</CenterX>
+                <CenterY>26500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>3-9</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389343814026">
+                    <X>76500</X>
+                    <Y>26500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="C10" Id="635676389343884034">
+                <CenterX>85500</CenterX>
+                <CenterY>26500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>3-10</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389343884034">
+                    <X>85500</X>
+                    <Y>26500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="C11" Id="635676389343974044">
+                <CenterX>94500</CenterX>
+                <CenterY>26500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>3-11</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389343974044">
+                    <X>94500</X>
+                    <Y>26500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="C12" Id="635676389344044052">
+                <CenterX>103500</CenterX>
+                <CenterY>26500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>3-12</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389344054053">
+                    <X>103500</X>
+                    <Y>26500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="D1" Id="635676389344134062">
+                <CenterX>4500</CenterX>
+                <CenterY>35500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>4-1</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389344134062">
+                    <X>4500</X>
+                    <Y>35500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="D2" Id="635676389344214071">
+                <CenterX>13500</CenterX>
+                <CenterY>35500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>4-2</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389344214071">
+                    <X>13500</X>
+                    <Y>35500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="D3" Id="635676389344294080">
+                <CenterX>22500</CenterX>
+                <CenterY>35500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>4-3</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389344294080">
+                    <X>22500</X>
+                    <Y>35500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="D4" Id="635676389344384090">
+                <CenterX>31500</CenterX>
+                <CenterY>35500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>4-4</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389344384090">
+                    <X>31500</X>
+                    <Y>35500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="D5" Id="635676389344464099">
+                <CenterX>40500</CenterX>
+                <CenterY>35500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>4-5</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389344464099">
+                    <X>40500</X>
+                    <Y>35500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="D6" Id="635676389344554109">
+                <CenterX>49500</CenterX>
+                <CenterY>35500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>4-6</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389344554109">
+                    <X>49500</X>
+                    <Y>35500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="D7" Id="635676389344634118">
+                <CenterX>58500</CenterX>
+                <CenterY>35500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>4-7</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389344634118">
+                    <X>58500</X>
+                    <Y>35500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="D8" Id="635676389344714127">
+                <CenterX>67500</CenterX>
+                <CenterY>35500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>4-8</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389344714127">
+                    <X>67500</X>
+                    <Y>35500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="D9" Id="635676389344814138">
+                <CenterX>76500</CenterX>
+                <CenterY>35500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>4-9</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389344814138">
+                    <X>76500</X>
+                    <Y>35500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="D10" Id="635676389344904148">
+                <CenterX>85500</CenterX>
+                <CenterY>35500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>4-10</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389344904148">
+                    <X>85500</X>
+                    <Y>35500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="D11" Id="635676389344994158">
+                <CenterX>94500</CenterX>
+                <CenterY>35500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>4-11</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389344994158">
+                    <X>94500</X>
+                    <Y>35500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="D12" Id="635676389345084168">
+                <CenterX>103500</CenterX>
+                <CenterY>35500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>4-12</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389345084168">
+                    <X>103500</X>
+                    <Y>35500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="E1" Id="635676389345204181">
+                <CenterX>4500</CenterX>
+                <CenterY>44500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>5-1</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389345204181">
+                    <X>4500</X>
+                    <Y>44500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="E2" Id="635676389345294191">
+                <CenterX>13500</CenterX>
+                <CenterY>44500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>5-2</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389345294191">
+                    <X>13500</X>
+                    <Y>44500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="E3" Id="635676389345384201">
+                <CenterX>22500</CenterX>
+                <CenterY>44500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>5-3</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389345384201">
+                    <X>22500</X>
+                    <Y>44500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="E4" Id="635676389345464210">
+                <CenterX>31500</CenterX>
+                <CenterY>44500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>5-4</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389345464210">
+                    <X>31500</X>
+                    <Y>44500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="E5" Id="635676389345564221">
+                <CenterX>40500</CenterX>
+                <CenterY>44500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>5-5</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389345564221">
+                    <X>40500</X>
+                    <Y>44500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="E6" Id="635676389345654231">
+                <CenterX>49500</CenterX>
+                <CenterY>44500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>5-6</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389345654231">
+                    <X>49500</X>
+                    <Y>44500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="E7" Id="635676389345744241">
+                <CenterX>58500</CenterX>
+                <CenterY>44500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>5-7</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389345744241">
+                    <X>58500</X>
+                    <Y>44500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="E8" Id="635676389345844252">
+                <CenterX>67500</CenterX>
+                <CenterY>44500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>5-8</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389345844252">
+                    <X>67500</X>
+                    <Y>44500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="E9" Id="635676389345924261">
+                <CenterX>76500</CenterX>
+                <CenterY>44500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>5-9</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389345924261">
+                    <X>76500</X>
+                    <Y>44500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="E10" Id="635676389346134283">
+                <CenterX>85500</CenterX>
+                <CenterY>44500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>5-10</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389346134283">
+                    <X>85500</X>
+                    <Y>44500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="E11" Id="635676389346234294">
+                <CenterX>94500</CenterX>
+                <CenterY>44500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>5-11</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389346234294">
+                    <X>94500</X>
+                    <Y>44500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="E12" Id="635676389346314303">
+                <CenterX>103500</CenterX>
+                <CenterY>44500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>5-12</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389346314303">
+                    <X>103500</X>
+                    <Y>44500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="F1" Id="635676389346404313">
+                <CenterX>4500</CenterX>
+                <CenterY>53500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>6-1</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389346404313">
+                    <X>4500</X>
+                    <Y>53500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="F2" Id="635676389346494323">
+                <CenterX>13500</CenterX>
+                <CenterY>53500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>6-2</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389346494323">
+                    <X>13500</X>
+                    <Y>53500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="F3" Id="635676389346584333">
+                <CenterX>22500</CenterX>
+                <CenterY>53500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>6-3</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389346584333">
+                    <X>22500</X>
+                    <Y>53500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="F4" Id="635676389346674343">
+                <CenterX>31500</CenterX>
+                <CenterY>53500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>6-4</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389346674343">
+                    <X>31500</X>
+                    <Y>53500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="F5" Id="635676389346754352">
+                <CenterX>40500</CenterX>
+                <CenterY>53500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>6-5</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389346754352">
+                    <X>40500</X>
+                    <Y>53500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="F6" Id="635676389346864364">
+                <CenterX>49500</CenterX>
+                <CenterY>53500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>6-6</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389346864364">
+                    <X>49500</X>
+                    <Y>53500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="F7" Id="635676389346944373">
+                <CenterX>58500</CenterX>
+                <CenterY>53500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>6-7</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389346944373">
+                    <X>58500</X>
+                    <Y>53500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="F8" Id="635676389347024382">
+                <CenterX>67500</CenterX>
+                <CenterY>53500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>6-8</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389347024382">
+                    <X>67500</X>
+                    <Y>53500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="F9" Id="635676389347104391">
+                <CenterX>76500</CenterX>
+                <CenterY>53500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>6-9</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389347104391">
+                    <X>76500</X>
+                    <Y>53500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="F10" Id="635676389347184400">
+                <CenterX>85500</CenterX>
+                <CenterY>53500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>6-10</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389347184400">
+                    <X>85500</X>
+                    <Y>53500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="F11" Id="635676389347264409">
+                <CenterX>94500</CenterX>
+                <CenterY>53500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>6-11</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389347264409">
+                    <X>94500</X>
+                    <Y>53500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="F12" Id="635676389347354419">
+                <CenterX>103500</CenterX>
+                <CenterY>53500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>6-12</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389347354419">
+                    <X>103500</X>
+                    <Y>53500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="G1" Id="635676389347434428">
+                <CenterX>4500</CenterX>
+                <CenterY>62500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>7-1</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389347434428">
+                    <X>4500</X>
+                    <Y>62500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="G2" Id="635676389347514437">
+                <CenterX>13500</CenterX>
+                <CenterY>62500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>7-2</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389347514437">
+                    <X>13500</X>
+                    <Y>62500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="G3" Id="635676389347594446">
+                <CenterX>22500</CenterX>
+                <CenterY>62500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>7-3</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389347594446">
+                    <X>22500</X>
+                    <Y>62500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="G4" Id="635676389347684456">
+                <CenterX>31500</CenterX>
+                <CenterY>62500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>7-4</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389347684456">
+                    <X>31500</X>
+                    <Y>62500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="G5" Id="635676389347794468">
+                <CenterX>40500</CenterX>
+                <CenterY>62500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>7-5</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389347804469">
+                    <X>40500</X>
+                    <Y>62500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="G6" Id="635676389347884478">
+                <CenterX>49500</CenterX>
+                <CenterY>62500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>7-6</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389347884478">
+                    <X>49500</X>
+                    <Y>62500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="G7" Id="635676389347984489">
+                <CenterX>58500</CenterX>
+                <CenterY>62500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>7-7</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389347984489">
+                    <X>58500</X>
+                    <Y>62500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="G8" Id="635676389348084500">
+                <CenterX>67500</CenterX>
+                <CenterY>62500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>7-8</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389348084500">
+                    <X>67500</X>
+                    <Y>62500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="G9" Id="635676389348164509">
+                <CenterX>76500</CenterX>
+                <CenterY>62500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>7-9</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389348164509">
+                    <X>76500</X>
+                    <Y>62500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="G10" Id="635676389348244518">
+                <CenterX>85500</CenterX>
+                <CenterY>62500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>7-10</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389348244518">
+                    <X>85500</X>
+                    <Y>62500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="G11" Id="635676389348514546">
+                <CenterX>94500</CenterX>
+                <CenterY>62500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>7-11</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389348514546">
+                    <X>94500</X>
+                    <Y>62500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="G12" Id="635676389350114707">
+                <CenterX>103500</CenterX>
+                <CenterY>62500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>7-12</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389350114707">
+                    <X>103500</X>
+                    <Y>62500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="H1" Id="635676389350214718">
+                <CenterX>4500</CenterX>
+                <CenterY>71500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>8-1</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389350224719">
+                    <X>4500</X>
+                    <Y>71500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="H2" Id="635676389350324730">
+                <CenterX>13500</CenterX>
+                <CenterY>71500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>8-2</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389350324730">
+                    <X>13500</X>
+                    <Y>71500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="H3" Id="635676389350414740">
+                <CenterX>22500</CenterX>
+                <CenterY>71500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>8-3</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389350414740">
+                    <X>22500</X>
+                    <Y>71500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="H4" Id="635676389350514751">
+                <CenterX>31500</CenterX>
+                <CenterY>71500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>8-4</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389350514751">
+                    <X>31500</X>
+                    <Y>71500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="H5" Id="635676389350604761">
+                <CenterX>40500</CenterX>
+                <CenterY>71500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>8-5</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389350604761">
+                    <X>40500</X>
+                    <Y>71500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="H6" Id="635676389350704772">
+                <CenterX>49500</CenterX>
+                <CenterY>71500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>8-6</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389350704772">
+                    <X>49500</X>
+                    <Y>71500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="H7" Id="635676389350794782">
+                <CenterX>58500</CenterX>
+                <CenterY>71500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>8-7</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389350794782">
+                    <X>58500</X>
+                    <Y>71500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="H8" Id="635676389350884792">
+                <CenterX>67500</CenterX>
+                <CenterY>71500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>8-8</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389350884792">
+                    <X>67500</X>
+                    <Y>71500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="H9" Id="635676389350974802">
+                <CenterX>76500</CenterX>
+                <CenterY>71500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>8-9</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389350974802">
+                    <X>76500</X>
+                    <Y>71500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="H10" Id="635676389351054811">
+                <CenterX>85500</CenterX>
+                <CenterY>71500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>8-10</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389351054811">
+                    <X>85500</X>
+                    <Y>71500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="H11" Id="635676389351134820">
+                <CenterX>94500</CenterX>
+                <CenterY>71500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>8-11</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389351134820">
+                    <X>94500</X>
+                    <Y>71500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+              <SingleTileRegionArray Name="H12" Id="635676389351214829">
+                <CenterX>103500</CenterX>
+                <CenterY>71500</CenterY>
+                <Width>7250</Width>
+                <Height>7250</Height>
+                <IsProtected>true</IsProtected>
+                <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                <TemplateShapeId>8-12</TemplateShapeId>
+                <Contour Type="Rectangle" />
+                <SingleTileRegions>
+                  <SingleTileRegion Name="P1" Id="635676389351214829">
+                    <X>103500</X>
+                    <Y>71500</Y>
+                    <Z>-8000</Z>
+                    <IsUsedForAcquisition>true</IsUsedForAcquisition>
+                  </SingleTileRegion>
+                </SingleTileRegions>
+              </SingleTileRegionArray>
+            </SingleTileRegionArrays>
+            <Template Name="Multichamber 96">
+              <AnchorPoint>-9900,-2750</AnchorPoint>
+              <BoundsSize>127800,85500</BoundsSize>
+              <Category>Multichamber</Category>
+              <HasRegularShapes>true</HasRegularShapes>
+              <ReferencePoint>0,0</ReferencePoint>
+              <ReferencePointLocationMode>TopLeft</ReferencePointLocationMode>
+              <ShapeType>Rectangle</ShapeType>
+              <ShapeColumns>12</ShapeColumns>
+              <ShapeRows>8</ShapeRows>
+              <ShapeWidth>7250</ShapeWidth>
+              <ShapeHeight>7250</ShapeHeight>
+              <ShapeDistanceX>9000</ShapeDistanceX>
+              <ShapeDistanceY>9000</ShapeDistanceY>
+              <OriginalShapeWidth>7250</OriginalShapeWidth>
+              <OriginalShapeHeight>7250</OriginalShapeHeight>
+              <OriginalShapeDistanceX>9000</OriginalShapeDistanceX>
+              <OriginalShapeDistanceY>9000</OriginalShapeDistanceY>
+              <AreShapesCenteredX>true</AreShapesCenteredX>
+              <AreShapesCenteredY>true</AreShapesCenteredY>
+              <ShapesDistanceToBorderX>0</ShapesDistanceToBorderX>
+              <ShapesDistanceToBorderY>0</ShapesDistanceToBorderY>
+              <Rotation>0</Rotation>
+              <ImmersionPoint>63900,42750</ImmersionPoint>
+              <BottomMaterial>Glass</BottomMaterial>
+              <BottomThickness>170</BottomThickness>
+              <BottomOffset>1500</BottomOffset>
+              <BottomOffsetMeasured>NaN</BottomOffsetMeasured>
+              <BottomRefractiveIndex>1.518</BottomRefractiveIndex>
+              <InsertType>Default</InsertType>
+              <PartOfInsertName></PartOfInsertName>
+              <BottomColor>Unknown</BottomColor>
+              <UsageHints></UsageHints>
+              <BottomDetectionShape>D6</BottomDetectionShape>
+              <SupportPoints />
+            </Template>
+          </SampleHolder>
+          <SubDimensionSetups>
+            <TilesSetup IsActivated="true">
+              <SubDimensionSetups>
+                <MultiTrackSetup IsActivated="true">
+                  <IsTIRFAngleSynchronized>true</IsTIRFAngleSynchronized>
+                  <ImagingDepth>0</ImagingDepth>
+                  <Track IsActivated="true" IsSelected="true">
+                    <DetectionModeSetup>
+                      <Zeiss.Micro.Acquisition.WfTrackDetectionMode />
+                    </DetectionModeSetup>
+                    <BeforeHardwareSetting>Before [DAPI]</BeforeHardwareSetting>
+                    <AfterHardwareSetting>After [DAPI]</AfterHardwareSetting>
+                    <IsExtendedSetupModificationWarningShown>false</IsExtendedSetupModificationWarningShown>
+                    <TrackName></TrackName>
+                    <ZStackMode>Yes</ZStackMode>
+                    <UseZStackCenter>true</UseZStackCenter>
+                    <ZStackSliceIndex>1</ZStackSliceIndex>
+                    <IsDisabledForApoTome>false</IsDisabledForApoTome>
+                    <FocusOffset>0</FocusOffset>
+                    <DirectDevice>Standard</DirectDevice>
+                    <Channels>
+                      <Channel IsActivated="true" IsSelected="true" ChannelSetupId="634892523078995213" Name="DAPI" Description="">
+                        <Color>#FF00CCFF</Color>
+                        <PixelShiftX>0</PixelShiftX>
+                        <PixelShiftY>0</PixelShiftY>
+                        <TemplateName>Fluorescence_Auto_Best-Fit</TemplateName>
+                        <Gamma>0.79999999999999982</Gamma>
+                        <Low>0.00050739307417494144</Low>
+                        <High>0.0078491454801951077</High>
+                        <LowerBestFit>2</LowerBestFit>
+                        <UpperBestFit>0.01</UpperBestFit>
+                        <UseDisplayValues>true</UseDisplayValues>
+                        <BitCountRange>16</BitCountRange>
+                        <PixelType>Gray8</PixelType>
+                        <IsAutoApplyEnabled>true</IsAutoApplyEnabled>
+                        <AutoApplyMode>BestFit</AutoApplyMode>
+                        <PaletteName>dawn</PaletteName>
+                        <DataGrabberSetup>
+                          <CameraFrameSetup Id="MTBCamera_MTBCameraPortChanger_Internal.TestCam">
+                            <ExposureTime IsActivated="true">20</ExposureTime>
+                            <Adjust IsActivated="true">0.8</Adjust>
+                            <AutoExposure IsActivated="true">false</AutoExposure>
+                            <EMGain IsActivated="true">50</EMGain>
+                            <ShadingReference IsActivated="true">false</ShadingReference>
+                            <ShadingReferenceSource IsActivated="true">1</ShadingReferenceSource>
+                          </CameraFrameSetup>
+                        </DataGrabberSetup>
+                        <FluorescenceDye>
+                          <Name>DAPI</Name>
+                          <ShortName>DAPI</ShortName>
+                          <Description></Description>
+                          <IlluminationType>Fluorescence</IlluminationType>
+                          <ContrastMethods>ReflectedLightFluorescence</ContrastMethods>
+                          <ContrastTypes>Unknown</ContrastTypes>
+                          <Color>#FF00A0FF</Color>
+                          <dye_id>McNamara-Boswell-0434</dye_id>
+                          <collection_id>66071726-cbd4-4c41-b371-0a6eee4ae9c5</collection_id>
+                        </FluorescenceDye>
+                      </Channel>
+                    </Channels>
+                  </Track>
+                  <SubDimensionSetups />
+                </MultiTrackSetup>
+              </SubDimensionSetups>
+            </TilesSetup>
+          </SubDimensionSetups>
+        </RegionsSetup>
+        <TimeSeriesSetup IsActivated="false">
+          <IsInteractive>true</IsInteractive>
+          <IsLongAsPossible>false</IsLongAsPossible>
+          <IsBurstMode>false</IsBurstMode>
+          <Duration>
+            <Cycles>96</Cycles>
+          </Duration>
+          <IsFastAsPossible>false</IsFastAsPossible>
+          <Interval>
+            <TimeSpan>
+              <Value>1</Value>
+              <DefaultUnitFormat>s</DefaultUnitFormat>
+            </TimeSpan>
+          </Interval>
+          <BeforeHardwareSetting></BeforeHardwareSetting>
+          <AfterHardwareSetting></AfterHardwareSetting>
+          <StartMode>
+            <Manual />
+          </StartMode>
+          <StopMode>
+            <Manual />
+          </StopMode>
+          <PauseBeginMode>
+            <Manual />
+          </PauseBeginMode>
+          <PauseEndMode>
+            <Manual />
+          </PauseEndMode>
+          <SwitchCollection />
+          <SetupExtensions />
+          <SubDimensionSetups />
+        </TimeSeriesSetup>
+        <ApoTomeAcquisitionSetup IsActivated="false">
+          <PhaseCount>3</PhaseCount>
+          <IsOnlineProcessing>false</IsOnlineProcessing>
+          <SubDimensionSetups />
+        </ApoTomeAcquisitionSetup>
+        <PanoramaSetup IsActivated="false">
+          <SubDimensionSetups />
+        </PanoramaSetup>
+        <ZStackSetup IsActivated="false">
+          <IsCenterMode>false</IsCenterMode>
+          <IsIntervalKept>true</IsIntervalKept>
+          <Offset>0</Offset>
+          <RefractiveIndexCorrection>1</RefractiveIndexCorrection>
+          <UseFocusBacklashCorrection>false</UseFocusBacklashCorrection>
+          <DelayAfterFocusMove>0</DelayAfterFocusMove>
+          <First>
+            <Distance>
+              <Value>-2E-06</Value>
+              <DefaultUnitFormat>um</DefaultUnitFormat>
+            </Distance>
+          </First>
+          <Last>
+            <Distance>
+              <Value>2E-06</Value>
+              <DefaultUnitFormat>um</DefaultUnitFormat>
+            </Distance>
+          </Last>
+          <Interval>
+            <Distance>
+              <Value>1E-06</Value>
+              <DefaultUnitFormat>um</DefaultUnitFormat>
+            </Distance>
+          </Interval>
+          <SetupExtensions />
+          <SubDimensionSetups />
+        </ZStackSetup>
+        <HalfPupilSetup IsActivated="false">
+          <IsContainerAdaptionEnabled>true</IsContainerAdaptionEnabled>
+          <StartAngle>0</StartAngle>
+          <SubDimensionSetups />
+        </HalfPupilSetup>
+        <LiveSetup IsActivated="false">
+          <SubDimensionSetups />
+        </LiveSetup>
+        <CPMPixelSourceSetup IsActivated="false">
+          <SubDimensionSetups />
+        </CPMPixelSourceSetup>
+      </SubDimensionSetups>
+      <HelperSetups>
+        <AcquisitionModeSetup IsActivated="true">
+          <SelectedDetector>MTBCamera_MTBCameraPortChanger_Internal.TestCam</SelectedDetector>
+          <Detectors>
+            <Camera Id="MTBCamera_MTBSideportChanger_Left.TestCam">
+              <ApplyCameraProfile Status="Valid">false</ApplyCameraProfile>
+              <ApplyImageOrientation Status="Valid">true</ApplyImageOrientation>
+              <CameraBias Status="Valid">32</CameraBias>
+              <ExposureTime Status="Valid">20</ExposureTime>
+              <Frame Status="Valid">0,0,640,640</Frame>
+              <ImageOrientation Status="Valid">0</ImageOrientation>
+              <Adjust Status="Valid">1</Adjust>
+              <AdjustFrameRate Status="Valid">true</AdjustFrameRate>
+              <AutoExposure Status="Valid">false</AutoExposure>
+              <AutoExposureFrame Status="Valid">Empty</AutoExposureFrame>
+              <Binning Status="Valid">1,1</Binning>
+              <DualCameraCalibration Status="Valid">false</DualCameraCalibration>
+              <DualCameraCalibrationId Status="Valid">None</DualCameraCalibrationId>
+              <ExposureDelay Status="Valid">32.883307169022</ExposureDelay>
+              <FrameRateTarget Status="Valid">30</FrameRateTarget>
+              <HDRBits Status="Valid">2</HDRBits>
+              <ImageCount Status="Valid">3</ImageCount>
+              <NoiseFilter Status="Valid">false</NoiseFilter>
+              <NoiseFilterThreshold Status="Valid">1.5</NoiseFilterThreshold>
+              <SnapMode Status="Valid">0</SnapMode>
+              <UnsharpMask Status="Valid">false</UnsharpMask>
+              <UnsharpMaskState Status="Valid">
+                <UnsharpMask>
+                  <ColorMode>0</ColorMode>
+                  <AutoContrastMode>0</AutoContrastMode>
+                  <ThresholdMode>1</ThresholdMode>
+                  <Strength>1</Strength>
+                  <Radius>2</Radius>
+                  <LowThreshold>0</LowThreshold>
+                  <HighThreshold>100</HighThreshold>
+                  <AutoContrastTolerance>1</AutoContrastTolerance>
+                  <ClipToValidBits>true</ClipToValidBits>
+                  <PerformInPlace>false</PerformInPlace>
+                </UnsharpMask>
+              </UnsharpMaskState>
+              <CameraProfile Status="Valid">*srgb</CameraProfile>
+              <DeliverReferenceData Status="Valid">false</DeliverReferenceData>
+              <DisplayCurrentImage Status="Valid">false</DisplayCurrentImage>
+              <LogCameraEvents Status="Valid">false</LogCameraEvents>
+              <CameraBitDepth Status="Valid">8</CameraBitDepth>
+              <ImagePath Status="Valid">C:\Users\M1SRH\Documents\Testdata_Zeiss\CCD_Testimages_Folder\96_well</ImagePath>
+              <ImageMode Status="Valid">0</ImageMode>
+              <PerformFunction Status="Valid">0</PerformFunction>
+              <UnitTestCamera Status="Valid"></UnitTestCamera>
+              <UnitTestIndex Status="Valid">0</UnitTestIndex>
+              <TestImageMode Status="Valid">0</TestImageMode>
+              <Resolution Status="Valid">0</Resolution>
+              <SimulateExposure Status="Valid">false</SimulateExposure>
+              <LiveMode Status="Valid">0</LiveMode>
+              <LogEvents Status="Valid">false</LogEvents>
+              <VariBits Status="Valid">8</VariBits>
+              <AutomaticTriggerControl Status="Valid">true</AutomaticTriggerControl>
+              <ShadingReference Status="Valid">false</ShadingReference>
+              <ImageFrame Status="Valid">0,0,640,640</ImageFrame>
+              <LiveImageFrame Status="Valid">0,0,640,640</LiveImageFrame>
+              <ImageByteSize Status="Valid">409600</ImageByteSize>
+              <LiveImageByteSize Status="Valid">409600</LiveImageByteSize>
+              <CameraPixelAccuracy Status="Valid">0.00390625</CameraPixelAccuracy>
+              <CameraPixelMaximum Status="Valid">255</CameraPixelMaximum>
+              <CameraPixelType Status="Valid">Gray8</CameraPixelType>
+              <ImagePixelAccuracy Status="Valid">0.00390625</ImagePixelAccuracy>
+              <ImagePixelType Status="Valid">Gray8</ImagePixelType>
+              <LiveImagePixelType Status="Valid">Gray8</LiveImagePixelType>
+              <LiveValidBits Status="Valid">8</LiveValidBits>
+              <ValidBits Status="Valid">8</ValidBits>
+              <FrameRate Status="Valid">30.4</FrameRate>
+              <ColorMode Status="Valid">0</ColorMode>
+            </Camera>
+            <Camera Id="MTBCamera_MTBSideportChanger_Right.TestCam">
+              <ApplyCameraProfile Status="Valid">false</ApplyCameraProfile>
+              <ApplyImageOrientation Status="Valid">true</ApplyImageOrientation>
+              <CameraBias Status="Valid">32</CameraBias>
+              <ExposureTime Status="Valid">20</ExposureTime>
+              <Frame Status="Valid">0,0,640,640</Frame>
+              <ImageOrientation Status="Valid">0</ImageOrientation>
+              <Adjust Status="Valid">1</Adjust>
+              <AdjustFrameRate Status="Valid">true</AdjustFrameRate>
+              <AutoExposure Status="Valid">false</AutoExposure>
+              <AutoExposureFrame Status="Valid">Empty</AutoExposureFrame>
+              <Binning Status="Valid">1,1</Binning>
+              <DualCameraCalibration Status="Valid">false</DualCameraCalibration>
+              <DualCameraCalibrationId Status="Valid">None</DualCameraCalibrationId>
+              <ExposureDelay Status="Valid">0</ExposureDelay>
+              <FrameRateTarget Status="Valid">30</FrameRateTarget>
+              <HDRBits Status="Valid">2</HDRBits>
+              <ImageCount Status="Valid">3</ImageCount>
+              <LiveMode Status="Valid">0</LiveMode>
+              <NoiseFilter Status="Valid">false</NoiseFilter>
+              <NoiseFilterThreshold Status="Valid">1.5</NoiseFilterThreshold>
+              <SnapMode Status="Valid">0</SnapMode>
+              <UnsharpMask Status="Valid">false</UnsharpMask>
+              <UnsharpMaskState Status="Valid">
+                <UnsharpMask>
+                  <ColorMode>0</ColorMode>
+                  <AutoContrastMode>0</AutoContrastMode>
+                  <ThresholdMode>1</ThresholdMode>
+                  <Strength>1</Strength>
+                  <Radius>2</Radius>
+                  <LowThreshold>0</LowThreshold>
+                  <HighThreshold>100</HighThreshold>
+                  <AutoContrastTolerance>1</AutoContrastTolerance>
+                  <ClipToValidBits>true</ClipToValidBits>
+                  <PerformInPlace>false</PerformInPlace>
+                </UnsharpMask>
+              </UnsharpMaskState>
+              <CameraProfile Status="Valid">*srgb</CameraProfile>
+              <DeliverReferenceData Status="Valid">false</DeliverReferenceData>
+              <DisplayCurrentImage Status="Valid">false</DisplayCurrentImage>
+              <LogCameraEvents Status="Valid">false</LogCameraEvents>
+              <CameraBitDepth Status="Valid">8</CameraBitDepth>
+              <ImagePath Status="Valid">c:\Users\zeiss\Documents\CCD_Testimages_Folder\96_well</ImagePath>
+              <ImageMode Status="Valid">0</ImageMode>
+              <PerformFunction Status="Valid">0</PerformFunction>
+              <UnitTestCamera Status="Valid"></UnitTestCamera>
+              <UnitTestIndex Status="Valid">0</UnitTestIndex>
+              <TestImageMode Status="Valid">0</TestImageMode>
+              <Resolution Status="Valid">0</Resolution>
+              <SimulateExposure Status="Valid">false</SimulateExposure>
+            </Camera>
+            <Camera Id="MTBCamera_MTBCSU_Left.TestCam">
+              <ApplyCameraProfile Status="Valid">false</ApplyCameraProfile>
+              <ApplyImageOrientation Status="Valid">true</ApplyImageOrientation>
+              <CameraBias Status="Valid">32</CameraBias>
+              <ExposureTime Status="Valid">20</ExposureTime>
+              <Frame Status="Valid">0,0,640,640</Frame>
+              <ImageOrientation Status="Valid">0</ImageOrientation>
+              <Adjust Status="Valid">1</Adjust>
+              <AdjustFrameRate Status="Valid">false</AdjustFrameRate>
+              <AutoExposure Status="Valid">false</AutoExposure>
+              <AutoExposureFrame Status="Valid">Empty</AutoExposureFrame>
+              <Binning Status="Valid">1,1</Binning>
+              <DualCameraCalibration Status="Valid">false</DualCameraCalibration>
+              <DualCameraCalibrationId Status="Valid">None</DualCameraCalibrationId>
+              <ExposureDelay Status="Valid">0</ExposureDelay>
+              <FrameRateTarget Status="Valid">30</FrameRateTarget>
+              <LiveMode Status="Valid">0</LiveMode>
+              <NoiseFilter Status="Valid">false</NoiseFilter>
+              <NoiseFilterThreshold Status="Valid">1.5</NoiseFilterThreshold>
+              <SnapMode Status="Valid">0</SnapMode>
+              <UnsharpMask Status="Valid">false</UnsharpMask>
+              <UnsharpMaskState Status="Valid">
+                <UnsharpMask>
+                  <ColorMode>0</ColorMode>
+                  <AutoContrastMode>0</AutoContrastMode>
+                  <ThresholdMode>1</ThresholdMode>
+                  <Strength>1</Strength>
+                  <Radius>2</Radius>
+                  <LowThreshold>0</LowThreshold>
+                  <HighThreshold>100</HighThreshold>
+                  <AutoContrastTolerance>1</AutoContrastTolerance>
+                  <ClipToValidBits>true</ClipToValidBits>
+                  <PerformInPlace>false</PerformInPlace>
+                </UnsharpMask>
+              </UnsharpMaskState>
+              <HDRBits Status="Valid">2</HDRBits>
+              <ImageCount Status="Valid">3</ImageCount>
+              <CameraProfile Status="Valid">*srgb</CameraProfile>
+              <DeliverReferenceData Status="Valid"></DeliverReferenceData>
+              <DisplayCurrentImage Status="Valid"></DisplayCurrentImage>
+              <LogCameraEvents Status="Valid"></LogCameraEvents>
+              <CameraBitDepth Status="Valid">8</CameraBitDepth>
+              <ImagePath Status="Valid">C:\Users\M1SRH\Documents\Testdata_Zeiss\CCD_Testimages_Folder\96_well</ImagePath>
+              <ImageMode Status="Valid">0</ImageMode>
+              <PerformFunction Status="Valid">0</PerformFunction>
+              <UnitTestCamera Status="Valid"></UnitTestCamera>
+              <UnitTestIndex Status="Valid">0</UnitTestIndex>
+              <TestImageMode Status="Valid">0</TestImageMode>
+              <Resolution Status="Valid">0</Resolution>
+              <SimulateExposure Status="Valid"></SimulateExposure>
+            </Camera>
+            <Camera Id="MTBCamera_MTBCameraPortChanger_Internal.TestCam">
+              <CameraDisplayName Status="Valid">Interne CCD</CameraDisplayName>
+              <ApplyCameraProfile Status="Valid">false</ApplyCameraProfile>
+              <ApplyImageOrientation Status="Valid">true</ApplyImageOrientation>
+              <CameraBias Status="Valid">32</CameraBias>
+              <ExposureTime Status="Valid">0</ExposureTime>
+              <Frame Status="Valid">0,0,640,640</Frame>
+              <ImageOrientation Status="Valid">0</ImageOrientation>
+              <ImageDeliveryBufferCount Status="Valid">4</ImageDeliveryBufferCount>
+              <Adjust Status="Valid">1</Adjust>
+              <AdjustFrameRate Status="Valid">true</AdjustFrameRate>
+              <AutoExposure Status="Valid">false</AutoExposure>
+              <AutoExposureFrame Status="Valid">Empty</AutoExposureFrame>
+              <Binning Status="Valid">1,1</Binning>
+              <BinningList Status="Valid">0</BinningList>
+              <BlackReference Status="Valid">false</BlackReference>
+              <DualCameraCalibration Status="Valid">false</DualCameraCalibration>
+              <DualCameraCalibrationId Status="Valid">None</DualCameraCalibrationId>
+              <ExposureDelay Status="Valid">32.883307169022</ExposureDelay>
+              <FrameRateTarget Status="Valid">4</FrameRateTarget>
+              <LiveMode Status="Valid">0</LiveMode>
+              <NoiseFilter Status="Valid">false</NoiseFilter>
+              <NoiseFilterThreshold Status="Valid">1.5</NoiseFilterThreshold>
+              <ShadingReference Status="Valid">false</ShadingReference>
+              <ShadingReferenceSource Status="Valid">1</ShadingReferenceSource>
+              <ShadingStrength Status="Valid">1</ShadingStrength>
+              <ShadingUseBias Status="Valid">true</ShadingUseBias>
+              <SnapMode Status="Valid">0</SnapMode>
+              <UnsharpMask Status="Valid">false</UnsharpMask>
+              <UnsharpMaskState Status="Valid">
+                <UnsharpMask>
+                  <ColorMode>0</ColorMode>
+                  <AutoContrastMode>0</AutoContrastMode>
+                  <ThresholdMode>1</ThresholdMode>
+                  <Strength>1</Strength>
+                  <Radius>2</Radius>
+                  <LowThreshold>0</LowThreshold>
+                  <HighThreshold>100</HighThreshold>
+                  <AutoContrastTolerance>1</AutoContrastTolerance>
+                  <ClipToValidBits>true</ClipToValidBits>
+                  <PerformInPlace>false</PerformInPlace>
+                </UnsharpMask>
+              </UnsharpMaskState>
+              <AsynchronousImageDelivery Status="Valid">false</AsynchronousImageDelivery>
+              <HDRBits Status="Valid">2</HDRBits>
+              <ImageCount Status="Valid">3</ImageCount>
+              <ContinuousAcquisitionMode Status="Valid">0</ContinuousAcquisitionMode>
+              <SequenceCount Status="Valid">0</SequenceCount>
+              <SequenceProgress Status="Valid">true</SequenceProgress>
+              <AcquisitionFrame Status="Valid">0,0,640,640</AcquisitionFrame>
+              <UserCameraOrientation Status="Valid">0</UserCameraOrientation>
+              <CameraProfile Status="Valid">*srgb</CameraProfile>
+              <DeliverReferenceData Status="Valid">false</DeliverReferenceData>
+              <DisplayCurrentImage Status="Valid">false</DisplayCurrentImage>
+              <LogCameraEvents Status="Valid">false</LogCameraEvents>
+              <CameraBitDepth Status="Valid">8</CameraBitDepth>
+              <ImagePath Status="Valid">C:\Users\M1SRH\Documents\Testdata_Zeiss\CCD_Testimages_Folder\96_well</ImagePath>
+              <ImageMode Status="Valid">0</ImageMode>
+              <LiveSpeed Status="Valid">0</LiveSpeed>
+              <PerformFunction Status="Valid">0</PerformFunction>
+              <UnitTestCamera Status="Valid"></UnitTestCamera>
+              <UnitTestIndex Status="Valid">0</UnitTestIndex>
+              <TestImageMode Status="Valid">0</TestImageMode>
+              <Resolution Status="Valid">0</Resolution>
+              <ChangeLiveSize Status="Valid">false</ChangeLiveSize>
+              <SimulateExposure Status="Valid">true</SimulateExposure>
+              <UseDecoder Status="Valid">true</UseDecoder>
+              <UseBasicCameraContinuousAcquisition Status="Valid">false</UseBasicCameraContinuousAcquisition>
+              <SaveSnap Status="Valid">false</SaveSnap>
+              <ModifyLiveImage Status="Valid"></ModifyLiveImage>
+            </Camera>
+          </Detectors>
+          <Devices />
+        </AcquisitionModeSetup>
+        <FocusSetup IsActivated="true">
+          <RepetitionSettingsMode>Standard</RepetitionSettingsMode>
+          <FocusStrategy IsActivated="true">
+            <StrategyMode>LocalFocusSurface</StrategyMode>
+            <ReferenceChannelId>634892523078995213</ReferenceChannelId>
+            <IsFocussingOnAllTracks>false</IsFocussingOnAllTracks>
+            <IsFocussingBeforeAcquisition>true</IsFocussingBeforeAcquisition>
+            <FixedZPosition>0</FixedZPosition>
+            <UseZPositionFromTilesSetup>false</UseZPositionFromTilesSetup>
+            <ExecutionInTileRegionMode>CenterOfRegion</ExecutionInTileRegionMode>
+            <SupportPointsMode>FixedZPosition</SupportPointsMode>
+            <FocusZStackMode>FixedZ</FocusZStackMode>
+            <WaitPositionMode>CenterOfFirstRegion</WaitPositionMode>
+            <WaitPositionX>0</WaitPositionX>
+            <WaitPositionY>0</WaitPositionY>
+            <WaitPositionZ>0</WaitPositionZ>
+            <IsUpdatePositionedRegionsToClientEnabled>false</IsUpdatePositionedRegionsToClientEnabled>
+            <PositionedRegionsUpdateMode>CumulatedPositions</PositionedRegionsUpdateMode>
+            <BreakAfterSupportPointsDetermination>false</BreakAfterSupportPointsDetermination>
+            <ErrorNotificationHints>None</ErrorNotificationHints>
+            <AdditionalSupportPointOffset>0</AdditionalSupportPointOffset>
+            <TimeSeriesIntervalInfo>
+              <IsActivated>false</IsActivated>
+              <IsMainIntervalEnabled>true</IsMainIntervalEnabled>
+              <IsSubIntervalEnabled>false</IsSubIntervalEnabled>
+              <MainInterval>1</MainInterval>
+              <SubInterval>1</SubInterval>
+            </TimeSeriesIntervalInfo>
+            <RegionsIntervalInfo>
+              <IsActivated>false</IsActivated>
+              <IsMainIntervalEnabled>true</IsMainIntervalEnabled>
+              <IsSubIntervalEnabled>false</IsSubIntervalEnabled>
+              <MainInterval>1</MainInterval>
+              <SubInterval>1</SubInterval>
+            </RegionsIntervalInfo>
+            <TilesIntervalInfo>
+              <IsActivated>false</IsActivated>
+              <IsMainIntervalEnabled>true</IsMainIntervalEnabled>
+              <IsSubIntervalEnabled>false</IsSubIntervalEnabled>
+              <MainInterval>1</MainInterval>
+              <SubInterval>1</SubInterval>
+            </TilesIntervalInfo>
+            <HardwareAutofocusOptions>
+              <IsSupportedBySoftwareAutofocus>false</IsSupportedBySoftwareAutofocus>
+            </HardwareAutofocusOptions>
+            <HardwareAutofocusSupportPointsModeOptions>
+              <IsSupportedBySoftwareAutofocus>false</IsSupportedBySoftwareAutofocus>
+            </HardwareAutofocusSupportPointsModeOptions>
+          </FocusStrategy>
+          <Autofocus Id="Autofocus">
+            <AutofocusStrategyMode Status="Valid">Software</AutofocusStrategyMode>
+            <AutofocusSignalQualityThreshold Status="Valid">50</AutofocusSignalQualityThreshold>
+          </Autofocus>
+          <HardwareAutofocus Id="MTBAutoFocus">
+            <Period>0</Period>
+            <AutofocusMountingAngle>0</AutofocusMountingAngle>
+            <AutofocusPositionOffset>0</AutofocusPositionOffset>
+            <AutofocusOperationMode>Exact</AutofocusOperationMode>
+            <AutofocusSpecimenType>Reflective</AutofocusSpecimenType>
+          </HardwareAutofocus>
+          <SoftwareAutofocus>
+            <ReflectionMode>Disabled</ReflectionMode>
+            <ReflectionModeOffset>-120</ReflectionModeOffset>
+            <AutofocusRegion>
+              <X>0</X>
+              <Y>0</Y>
+              <DX>1</DX>
+              <DY>1</DY>
+            </AutofocusRegion>
+            <BacklashStepsize>2</BacklashStepsize>
+            <DepthOfFocus>5.37</DepthOfFocus>
+            <DoBacklashCorrection>-1</DoBacklashCorrection>
+            <DoBleachingCorrection>true</DoBleachingCorrection>
+            <FactorGaussianFitStepsize>10</FactorGaussianFitStepsize>
+            <InitialDirection>1</InitialDirection>
+            <IsAutomaticRange>true</IsAutomaticRange>
+            <LowerLimit>100</LowerLimit>
+            <Precision>4</Precision>
+            <PredefinedStepsize>Optimal</PredefinedStepsize>
+            <SharpnessMeasureMethod>Auto</SharpnessMeasureMethod>
+            <RelativeSearchRange>214.8</RelativeSearchRange>
+            <SearchRangeType>Relative</SearchRangeType>
+            <SearchStrategy>Exhaustive</SearchStrategy>
+            <SharpnessMeasureSet Name="Best">
+              <SharpnessMeasure DecisionWeight="1" ScoreType="HaarGradient">
+                <Parameters>
+                  <Parameter>1</Parameter>
+                </Parameters>
+              </SharpnessMeasure>
+              <SharpnessMeasure DecisionWeight="2" ScoreType="HaarGradient">
+                <Parameters>
+                  <Parameter>2</Parameter>
+                </Parameters>
+              </SharpnessMeasure>
+              <SharpnessMeasure DecisionWeight="3" ScoreType="HaarGradient">
+                <Parameters>
+                  <Parameter>3</Parameter>
+                </Parameters>
+              </SharpnessMeasure>
+            </SharpnessMeasureSet>
+            <UpperLimit>-100</UpperLimit>
+            <UseAcquisitionROI>true</UseAcquisitionROI>
+            <UseCameraParameters>false</UseCameraParameters>
+            <UseChannelInformation>true</UseChannelInformation>
+          </SoftwareAutofocus>
+          <DefiniteFocus IsActivated="false">
+            <IsContinuousStabilizationEnabled>false</IsContinuousStabilizationEnabled>
+            <ContinuousStabilizationMode>Periodic</ContinuousStabilizationMode>
+            <Period>10</Period>
+            <OperationMode>Exact</OperationMode>
+            <IsPausedDuringAcquisition>true</IsPausedDuringAcquisition>
+            <SkipInitialization>false</SkipInitialization>
+            <DelayOnFirstTileInRegion>0</DelayOnFirstTileInRegion>
+          </DefiniteFocus>
+        </FocusSetup>
+        <BleachingSetup IsActivated="false">
+          <BleachSettingsName>not defined</BleachSettingsName>
+          <BleachSettingsType></BleachSettingsType>
+        </BleachingSetup>
+        <RatioSetup IsActivated="false">
+          <IsRatioImageGenerated>false</IsRatioImageGenerated>
+          <SelectedColorMode>Palette</SelectedColorMode>
+          <Color>#00FFFFFF</Color>
+          <PaletteName>rainbow</PaletteName>
+          <RatioDisplayMinimum>0</RatioDisplayMinimum>
+          <RatioDisplayMaximum>10</RatioDisplayMaximum>
+          <RatioMethod>SingleWavelength</RatioMethod>
+          <SelectedReferenceIdChannel1>0</SelectedReferenceIdChannel1>
+          <SelectedReferenceIdChannel2>0</SelectedReferenceIdChannel2>
+          <RatioBackgroundCorrection>None</RatioBackgroundCorrection>
+          <BackgroundCorrectionChannel1>0</BackgroundCorrectionChannel1>
+          <BackgroundCorrectionChannel2>0</BackgroundCorrectionChannel2>
+          <AverageFrame>5</AverageFrame>
+          <Multiplicator>1</Multiplicator>
+          <IsOptionalThreshold>false</IsOptionalThreshold>
+          <OptionalThresholdChannel1>0</OptionalThresholdChannel1>
+          <OptionalThresholdChannel2>0</OptionalThresholdChannel2>
+          <IsRatioCalculationEnabled>true</IsRatioCalculationEnabled>
+          <IsRatioReferenceImageDefined>true</IsRatioReferenceImageDefined>
+          <AverageStartFrame>1</AverageStartFrame>
+          <AverageEndFrame>1</AverageEndFrame>
+        </RatioSetup>
+        <LinkamRampSetup IsActivated="false">
+          <Rate>0</Rate>
+          <Limit>0</Limit>
+          <HoldTime>0</HoldTime>
+          <RampType>None</RampType>
+        </LinkamRampSetup>
+        <TempSeriesSetup IsActivated="false">
+          <TemperatureStep>0</TemperatureStep>
+        </TempSeriesSetup>
+        <CPMFocusSetup IsActivated="false">
+          <StrategyMode>None</StrategyMode>
+          <UseAutoBC>false</UseAutoBC>
+          <ScanSpeedForBCTraining>0</ScanSpeedForBCTraining>
+        </CPMFocusSetup>
+        <PipetteSetup IsActivated="false">
+          <Duration>0</Duration>
+          <IsManualMode>true</IsManualMode>
+          <SelectedRepeatUnit>s</SelectedRepeatUnit>
+          <MoveStageDown>false</MoveStageDown>
+          <IsPipetteEnabled>true</IsPipetteEnabled>
+          <PipetteCountLimit>-1</PipetteCountLimit>
+          <Containers />
+        </PipetteSetup>
+        <AutoImmersionSetup IsActivated="false">
+          <ImmersionTimeInterval>5</ImmersionTimeInterval>
+          <ImmersionTravelDistance>50</ImmersionTravelDistance>
+          <IsBubbleEliminationMovementEnabled>false</IsBubbleEliminationMovementEnabled>
+          <BubbleEliminationMovementTargetX>20000</BubbleEliminationMovementTargetX>
+          <BubbleEliminationMovementTargetY>20000</BubbleEliminationMovementTargetY>
+        </AutoImmersionSetup>
+        <DynamicsSetup IsActivated="false" GraphicScale="1" Id="636257817882256378">
+          <Appliances>
+            <MeasurementSettings />
+            <DisplaySetting>
+              <Channels />
+            </DisplaySetting>
+          </Appliances>
+        </DynamicsSetup>
+        <ExperimentRegionsSetup IsActivated="false">
+          <FitFrameSizeToRegions>false</FitFrameSizeToRegions>
+          <UseStageCoordinates>false</UseStageCoordinates>
+          <Regions />
+        </ExperimentRegionsSetup>
+        <VivaTome2AcquisitionSetup IsActivated="true">
+          <AcquisitionMode>OpticalSectioning</AcquisitionMode>
+          <IsShadingCorrection>true</IsShadingCorrection>
+          <IsNormalization>false</IsNormalization>
+          <Averaging>1</Averaging>
+          <Grid>Pattern2</Grid>
+          <AutomaticGridControl>true</AutomaticGridControl>
+          <IsOnlineProcessing>false</IsOnlineProcessing>
+        </VivaTome2AcquisitionSetup>
+        <AutoImmersionRemovalSetup IsActivated="true">
+          <ImmersionRemovePositionX>Infinity</ImmersionRemovePositionX>
+          <ImmersionRemovePositionY>Infinity</ImmersionRemovePositionY>
+        </AutoImmersionRemovalSetup>
+        <DisableBlankingSetup IsActivated="false" />
+      </HelperSetups>
+    </AcquisitionBlock>
+  </ExperimentBlocks>
+  <HardwareSettingsPool>
+    <HardwareSetting Name="Before [DAPI]">
+      <ParameterCollection Id="MTBFLLEDController">
+        <LampMode Status="Valid" IsActivated="true">LEDContinuous</LampMode>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBLED1">
+        <IsEnabled Status="Valid" IsActivated="true">false</IsEnabled>
+        <Intensity Status="Valid" IsActivated="true">50.048875855328</Intensity>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBSideportChanger">
+        <Position IsActivated="true">2</Position>
+        <PositionName IsActivated="true">Aquila.SideportElement_100%L</PositionName>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBLED2">
+        <IsEnabled Status="Valid" IsActivated="true">false</IsEnabled>
+        <Intensity Status="Valid" IsActivated="true">0</Intensity>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBLED3">
+        <IsEnabled Status="Valid" IsActivated="true">false</IsEnabled>
+        <Intensity Status="Valid" IsActivated="true">0</Intensity>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBLED4">
+        <IsEnabled Status="Valid" IsActivated="true">false</IsEnabled>
+        <Intensity Status="Valid" IsActivated="true">0</Intensity>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBFLLEDShutter">
+        <IsClosed Status="Valid" IsActivated="true">true</IsClosed>
+      </ParameterCollection>
+    </HardwareSetting>
+    <HardwareSetting Name="After [DAPI]">
+      <ParameterCollection Id="MTBLED1">
+        <IsEnabled IsActivated="true">false</IsEnabled>
+        <Intensity IsActivated="true">0</Intensity>
+      </ParameterCollection>
+    </HardwareSetting>
+  </HardwareSettingsPool>
+  <ExperimentFeedback IsActivated="true">
+    <IsSynchronous>true</IsSynchronous>
+    <IsSynchronousToAnalysis>true</IsSynchronousToAnalysis>
+    <IsSynchronousToFile>false</IsSynchronousToFile>
+    <AllowNonExperimentObservablesToTriggerScript>false</AllowNonExperimentObservablesToTriggerScript>
+    <DeadlockTimeout>10</DeadlockTimeout>
+    <PreScript>filename = '-f ' + ZenService.Experiment.ImageFileName[:-4] + '_Log.txt'
+# !!! watch the space before the -c in params !!!
+params = ' -c 12 -r 8' # specify well plate format, e.g. 12 x 8 = 96 Wells
+script = r'c:\TFS\Doc\3-ZIS\3-Development\Discussions\ExpFeedback\DVD\Python_Scripts\dynamic_plot_96well_sync.py' ## this is a external python application
+ZenService.Xtra.System.ExecuteExternalProgram(script, filename + params)</PreScript>
+    <LoopScript>## this version of the script is meant to be used in the determined mode.
+
+## get number of cells from current image
+cn = ZenService.Analysis.AllCells.RegionsCount
+## get the current well name, column idex, row index and position index
+well = ZenService.Analysis.AllCells.ImageSceneContainerName
+col = ZenService.Analysis.AllCells.ImageSceneColumn
+row = ZenService.Analysis.AllCells.ImageSceneRow
+## create logfile
+logfile = ZenService.Xtra.System.AppendLogLine(str(well)+'\t'+str(cn)+'\t'+str(col)+'\t'+str(row))</LoopScript>
+    <PostScript>## open logfile
+ZenService.Xtra.System.ExecuteExternalProgram(logfile, r'C:\Program Files (x86)\Notepad++\notepad++.exe')</PostScript>
+    <IsWarningPopupShown>true</IsWarningPopupShown>
+    <AreDebugMessagesEnabled>false</AreDebugMessagesEnabled>
+    <AnalysisScript Name="Count_Cells_DAPI_96well.czias">
+      <Version>1.1</Version>
+      <TilingMode>TilingAndMerging</TilingMode>
+      <TileSize>1000</TileSize>
+      <MaxParticleSize>0</MaxParticleSize>
+      <MaxDisplaySize>3500</MaxDisplaySize>
+      <HiliteColor>#FFFF0000</HiliteColor>
+      <HiliteLineWidth>1</HiliteLineWidth>
+      <Script Name="Builtin Multichannel">
+        <SegmenterSource>SegmenterBuiltinDefault</SegmenterSource>
+      </Script>
+      <SubImageDimension>C</SubImageDimension>
+      <RegionClass Name="Root" Id="0">
+        <Type>Or</Type>
+        <Color>#FFFFFFFF</Color>
+        <RegionClass Name="AllCells" Id="1">
+          <Type>Collection</Type>
+          <Color>#FFB40000</Color>
+          <ParametersCollection>
+            <Parameters Key="Segmentation" Name="SegmenterClassBuiltinDefault" />
+          </ParametersCollection>
+          <Features>
+            <Features>
+              <Feature Name="RegionsCount" IsDisplayEnabled="true" />
+              <Feature Name="ImageSceneContainerName" />
+              <Feature Name="ImageSceneColumn" />
+              <Feature Name="ImageSceneRow" />
+              <Feature Name="ImageIndexPosition" />
+            </Features>
+          </Features>
+          <RegionClass Name="SingleCell" Id="2">
+            <Type>Single</Type>
+            <ChannelName>DAPI</ChannelName>
+            <Color>#FFFF6600</Color>
+            <Overlap>60</Overlap>
+            <ParametersCollection>
+              <Parameters Key="Segmentation" Name="SegmenterClassBuiltinDefault">
+                <Parameter Key="Smoothing1">
+                  <Source>Smoothing</Source>
+                  <IsInteractive>false</IsInteractive>
+                  <Mode>Lowpass</Mode>
+                  <LowpassKernelSize>5</LowpassKernelSize>
+                  <MedianKernelSize>3</MedianKernelSize>
+                  <GaussSigma>1.3</GaussSigma>
+                </Parameter>
+                <Parameter Key="Sharpening1">
+                  <Source>Sharpening</Source>
+                  <IsInteractive>false</IsInteractive>
+                  <Mode>None</Mode>
+                  <DelineateThreshold>0</DelineateThreshold>
+                  <DelineateSize>1</DelineateSize>
+                  <UnsharpRadius>2</UnsharpRadius>
+                  <UnsharpStrength>1</UnsharpStrength>
+                </Parameter>
+                <Parameter Key="MinArea1">
+                  <Source>MinArea</Source>
+                  <IsInteractive>false</IsInteractive>
+                  <Minimum>1</Minimum>
+                  <Value>50</Value>
+                  <Maximum>1000</Maximum>
+                  <SmallChange>1</SmallChange>
+                </Parameter>
+                <Parameter Key="ThresholdHistogram1">
+                  <Source>ThresholdHistogram</Source>
+                  <Minimum1>0</Minimum1>
+                  <ValueLower1>43</ValueLower1>
+                  <ValueUpper1>236</ValueUpper1>
+                  <Maximum1>255</Maximum1>
+                  <Minimum2>0</Minimum2>
+                  <ValueLower2>0</ValueLower2>
+                  <ValueUpper2>0</ValueUpper2>
+                  <Maximum2>255</Maximum2>
+                  <Minimum3>0</Minimum3>
+                  <ValueLower3>0</ValueLower3>
+                  <ValueUpper3>0</ValueUpper3>
+                  <Maximum3>255</Maximum3>
+                  <IsHLS>false</IsHLS>
+                  <IsValid1>true</IsValid1>
+                  <IsValid2>false</IsValid2>
+                  <IsValid3>false</IsValid3>
+                  <AnalysisThresholdMode>Automatic</AnalysisThresholdMode>
+                  <AutomaticThresholdMethod>Otsu</AutomaticThresholdMethod>
+                  <AnalysisThresholdShapeMode>Polygon</AnalysisThresholdShapeMode>
+                  <PickSize>1</PickSize>
+                  <PickTolerance>3</PickTolerance>
+                </Parameter>
+                <Parameter Key="Fill1">
+                  <Name>@ImageAnalysisWizard_SegmentationFill</Name>
+                  <Source>Boolean</Source>
+                  <IsInteractive>false</IsInteractive>
+                  <Value>true</Value>
+                </Parameter>
+                <Parameter Key="Separate1">
+                  <Source>Separate</Source>
+                  <IsInteractive>false</IsInteractive>
+                  <Mode>Watersheds</Mode>
+                  <Count>3</Count>
+                </Parameter>
+              </Parameters>
+            </ParametersCollection>
+            <InteractiveParameters>
+              <Parameter Key="RegionEdit1">
+                <Source>RegionEdit</Source>
+                <IsInteractive>false</IsInteractive>
+                <EditMethod>Draw</EditMethod>
+              </Parameter>
+              <Parameter Key="RegionGrow1">
+                <Source>RegionGrow</Source>
+                <IsInteractive>false</IsInteractive>
+                <IntensityTolerance>10</IntensityTolerance>
+                <ColorTolerance>10</ColorTolerance>
+                <Fill>false</Fill>
+              </Parameter>
+            </InteractiveParameters>
+            <Conditions>
+              <Condition Key="MinMax1">
+                <Name>MinMax</Name>
+                <Source>ConditionMinMax</Source>
+              </Condition>
+            </Conditions>
+            <Features>
+              <Features>
+                <Feature Name="ID" />
+                <Feature Name="Area" />
+                <Feature Name="Perimeter" />
+                <Feature Name="ImageSceneContainerName" />
+                <Feature Name="ImageSceneColumn" />
+                <Feature Name="ImageSceneRow" />
+              </Features>
+            </Features>
+          </RegionClass>
+        </RegionClass>
+      </RegionClass>
+      <RegionClassTemplate Name="RootTemplate" Id="0">
+        <Type>Or</Type>
+        <Color>#FFFFFFFF</Color>
+        <RegionClass Name="Classes" Id="11">
+          <Type>Collection</Type>
+          <Color>#FFB40000</Color>
+          <Features>
+            <Features>
+              <Feature Name="RegionsCount" />
+            </Features>
+          </Features>
+          <RegionClass Name="Class" Id="12">
+            <Type>Single</Type>
+            <Color>#FFFFFFFF</Color>
+            <Overlap>60</Overlap>
+            <ParametersCollection>
+              <Parameters Key="Segmentation" Name="SegmenterClassBuiltinDefault">
+                <Parameter Key="Smoothing1">
+                  <Source>Smoothing</Source>
+                  <MustExecute>false</MustExecute>
+                  <IsInteractive>false</IsInteractive>
+                  <Mode>None</Mode>
+                  <LowpassKernelSize>3</LowpassKernelSize>
+                  <MedianKernelSize>3</MedianKernelSize>
+                  <GaussSigma>1.3</GaussSigma>
+                </Parameter>
+                <Parameter Key="Sharpening1">
+                  <Source>Sharpening</Source>
+                  <IsInteractive>false</IsInteractive>
+                  <Mode>None</Mode>
+                  <DelineateThreshold>0</DelineateThreshold>
+                  <DelineateSize>1</DelineateSize>
+                  <UnsharpRadius>2</UnsharpRadius>
+                  <UnsharpStrength>1</UnsharpStrength>
+                </Parameter>
+                <Parameter Key="MinArea1">
+                  <Source>MinArea</Source>
+                  <IsInteractive>false</IsInteractive>
+                  <Minimum>1</Minimum>
+                  <Value>1</Value>
+                  <Maximum>1000</Maximum>
+                  <SmallChange>1</SmallChange>
+                </Parameter>
+                <Parameter Key="ThresholdHistogram1">
+                  <Source>ThresholdHistogram</Source>
+                  <Minimum1>0</Minimum1>
+                  <ValueLower1>0</ValueLower1>
+                  <ValueUpper1>0</ValueUpper1>
+                  <Maximum1>255</Maximum1>
+                  <Minimum2>0</Minimum2>
+                  <ValueLower2>0</ValueLower2>
+                  <ValueUpper2>0</ValueUpper2>
+                  <Maximum2>255</Maximum2>
+                  <Minimum3>0</Minimum3>
+                  <ValueLower3>0</ValueLower3>
+                  <ValueUpper3>0</ValueUpper3>
+                  <Maximum3>255</Maximum3>
+                  <IsHLS>false</IsHLS>
+                  <IsValid1>false</IsValid1>
+                  <IsValid2>false</IsValid2>
+                  <IsValid3>false</IsValid3>
+                  <AnalysisThresholdMode>Click</AnalysisThresholdMode>
+                  <AutomaticThresholdMethod>Otsu</AutomaticThresholdMethod>
+                  <AnalysisThresholdShapeMode>Polygon</AnalysisThresholdShapeMode>
+                  <PickSize>1</PickSize>
+                  <PickTolerance>3</PickTolerance>
+                </Parameter>
+                <Parameter Key="Fill1">
+                  <Name>@ImageAnalysisWizard_SegmentationFill</Name>
+                  <Source>Boolean</Source>
+                  <IsInteractive>false</IsInteractive>
+                  <Value>false</Value>
+                </Parameter>
+                <Parameter Key="Separate1">
+                  <Source>Separate</Source>
+                  <IsInteractive>false</IsInteractive>
+                  <Mode>None</Mode>
+                  <Count>3</Count>
+                </Parameter>
+              </Parameters>
+            </ParametersCollection>
+            <InteractiveParameters>
+              <Parameter Key="RegionEdit1">
+                <Source>RegionEdit</Source>
+                <IsInteractive>false</IsInteractive>
+                <EditMethod>Draw</EditMethod>
+              </Parameter>
+              <Parameter Key="RegionGrow1">
+                <Source>RegionGrow</Source>
+                <IsInteractive>false</IsInteractive>
+                <IntensityTolerance>10</IntensityTolerance>
+                <ColorTolerance>10</ColorTolerance>
+                <Fill>false</Fill>
+              </Parameter>
+            </InteractiveParameters>
+            <Conditions>
+              <Condition Key="MinMax1">
+                <Name>MinMax</Name>
+                <Source>ConditionMinMax</Source>
+              </Condition>
+            </Conditions>
+            <Features>
+              <Features>
+                <Feature Name="ID" />
+                <Feature Name="Area" />
+                <Feature Name="Perimeter" />
+              </Features>
+            </Features>
+          </RegionClass>
+        </RegionClass>
+      </RegionClassTemplate>
+      <AnalysisStepCollection>
+        <AnalysisStep Name="Class">
+          <MustExecute>false</MustExecute>
+          <IsInteractive>false</IsInteractive>
+        </AnalysisStep>
+        <AnalysisStep Name="Frame">
+          <MustExecute>true</MustExecute>
+          <IsInteractive>false</IsInteractive>
+        </AnalysisStep>
+        <AnalysisStep Name="Segmentation">
+          <MustExecute>true</MustExecute>
+          <IsInteractive>true</IsInteractive>
+        </AnalysisStep>
+        <AnalysisStep Name="Condition">
+          <MustExecute>false</MustExecute>
+          <IsInteractive>false</IsInteractive>
+        </AnalysisStep>
+        <AnalysisStep Name="Interactive">
+          <MustExecute>true</MustExecute>
+          <IsInteractive>false</IsInteractive>
+        </AnalysisStep>
+        <AnalysisStep Name="Features">
+          <MustExecute>false</MustExecute>
+          <IsInteractive>false</IsInteractive>
+        </AnalysisStep>
+        <AnalysisStep Name="Measure">
+          <MustExecute>false</MustExecute>
+          <IsInteractive>false</IsInteractive>
+        </AnalysisStep>
+      </AnalysisStepCollection>
+      <AdditionalChannelSetting />
+      <AnalysisFrameTeach>
+        <Source>AnalysisFrameDefault</Source>
+      </AnalysisFrameTeach>
+      <AnalysisFrameRun>
+        <Source>AnalysisFrameDefault</Source>
+      </AnalysisFrameRun>
+      <AnalysisFeatures>
+        <Source>AnalysisFeaturesDefault</Source>
+      </AnalysisFeatures>
+      <AnalysisClass>
+        <Source>AnalysisClassDefault</Source>
+      </AnalysisClass>
+      <MeasureFrame>
+        <FrameMode>Inside</FrameMode>
+        <IsFrameMaximize>false</IsFrameMaximize>
+        <Complement>false</Complement>
+        <GraphicLayer>
+          <Usage>Edit</Usage>
+          <IsProtected>false</IsProtected>
+          <IsAnimationEnabled>false</IsAnimationEnabled>
+          <AnimationDimension>None</AnimationDimension>
+          <LayerFlags>1</LayerFlags>
+          <Elements />
+        </GraphicLayer>
+      </MeasureFrame>
+    </AnalysisScript>
+    <Actions />
+  </ExperimentFeedback>
+  <AdditionalSettings />
+  <Metadata>
+    <ExperimentDuration></ExperimentDuration>
+  </Metadata>
+</HardwareExperiment>

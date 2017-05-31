@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HardwareExperiment Version="1.1">
   <RunMode>OptimizeBeforePerformEnabled,ValidateAndAdaptBeforePerformEnabled,MultipleFilesEnabled</RunMode>
-  <BeforeHardwareSetting>Before Exp [EGFP] Smart</BeforeHardwareSetting>
-  <AfterHardwareSetting>After Exp [EGFP] Smart</AfterHardwareSetting>
+  <BeforeHardwareSetting>Before Exp [F2] Smart</BeforeHardwareSetting>
+  <AfterHardwareSetting>After Exp [F2] Smart</AfterHardwareSetting>
   <ExperimentBlockIndex>0</ExperimentBlockIndex>
   <IsSegmented>false</IsSegmented>
   <IsStandardMode>true</IsStandardMode>
@@ -25,18 +25,10 @@
     <SingleFileName>New</SingleFileName>
     <DimensionsForSeparateFolders>-C;-T;-Z;-S</DimensionsForSeparateFolders>
   </AutoSave>
-  <Scripting IsActivated="false">
-    <RunMacroBeforeExperiment>false</RunMacroBeforeExperiment>
-    <MacroBeforeExperiment></MacroBeforeExperiment>
-    <ErrorActionBeforeExperiment>ErrorAction_Continue</ErrorActionBeforeExperiment>
-    <RunMacroAfterExperiment>false</RunMacroAfterExperiment>
-    <MacroAfterExperiment></MacroAfterExperiment>
-    <ErrorActionAfterExperiment>ErrorAction_Continue</ErrorActionAfterExperiment>
-  </Scripting>
   <BlockExecutionOrder>1</BlockExecutionOrder>
   <LoopDefinitions />
   <ExperimentBlocks>
-    <AcquisitionBlock IsActivated="true" BlockReference="635829983602875165">
+    <AcquisitionBlock IsActivated="true" BlockReference="635818072164451989">
       <RunMode>ComponentUpdateEnabled,StateUpdateEnabled</RunMode>
       <SubDimensionSetups>
         <TimeSeriesSetup IsActivated="true">
@@ -44,17 +36,15 @@
           <IsLongAsPossible>false</IsLongAsPossible>
           <IsBurstMode>false</IsBurstMode>
           <Duration>
-            <Cycles>30</Cycles>
+            <Cycles>60</Cycles>
           </Duration>
           <IsFastAsPossible>false</IsFastAsPossible>
           <Interval>
             <TimeSpan>
-              <Value>0.5</Value>
-              <DefaultUnitFormat>ms</DefaultUnitFormat>
+              <Value>1</Value>
+              <DefaultUnitFormat>s</DefaultUnitFormat>
             </TimeSpan>
           </Interval>
-          <BeforeHardwareSetting></BeforeHardwareSetting>
-          <AfterHardwareSetting></AfterHardwareSetting>
           <StartMode>
             <Manual />
           </StartMode>
@@ -73,14 +63,13 @@
             <MultiTrackSetup IsActivated="true">
               <IsTIRFAngleSynchronized>true</IsTIRFAngleSynchronized>
               <ImagingDepth>0</ImagingDepth>
-              <Track IsActivated="true" IsSelected="true">
+              <Track IsActivated="true" IsSelected="false">
                 <DetectionModeSetup>
                   <Zeiss.Micro.Acquisition.WfTrackDetectionMode />
                 </DetectionModeSetup>
-                <BeforeHardwareSetting>Before [EGFP] Smart</BeforeHardwareSetting>
-                <AfterHardwareSetting>After [EGFP] Smart</AfterHardwareSetting>
+                <BeforeHardwareSetting>Before [F2] Smart</BeforeHardwareSetting>
+                <AfterHardwareSetting>After [F2] Smart</AfterHardwareSetting>
                 <IsExtendedSetupModificationWarningShown>false</IsExtendedSetupModificationWarningShown>
-                <TrackName></TrackName>
                 <ZStackMode>Yes</ZStackMode>
                 <UseZStackCenter>true</UseZStackCenter>
                 <ZStackSliceIndex>1</ZStackSliceIndex>
@@ -88,10 +77,21 @@
                 <FocusOffset>0</FocusOffset>
                 <DirectDevice>MTBFLLEDControllerCombiner</DirectDevice>
                 <Channels>
-                  <Channel IsActivated="true" IsSelected="true" ChannelSetupId="635829983713335167" Name="EGFP" Description="">
-                    <Color>#FF00FF5B</Color>
+                  <Channel IsActivated="true" IsSelected="false" ChannelSetupId="635818073386574230" Name="Fura-2 in pH 7.2 Ca free" Description="">
+                    <Color>#FF00FF36</Color>
                     <PixelShiftX>0</PixelShiftX>
                     <PixelShiftY>0</PixelShiftY>
+                    <TemplateName>Fluorescence_Auto_Best-Fit</TemplateName>
+                    <Gamma>0.79999999999999982</Gamma>
+                    <Low>0.00050739307417494144</Low>
+                    <High>0.0078491454801951077</High>
+                    <LowerBestFit>2</LowerBestFit>
+                    <UpperBestFit>0.01</UpperBestFit>
+                    <UseDisplayValues>true</UseDisplayValues>
+                    <BitCountRange>16</BitCountRange>
+                    <PixelType>Gray8</PixelType>
+                    <IsAutoApplyEnabled>true</IsAutoApplyEnabled>
+                    <AutoApplyMode>BestFit</AutoApplyMode>
                     <DataGrabberSetup>
                       <CameraFrameSetup Id="MTBCamera_MTBCameraPortChanger_Internal.TestCam">
                         <ExposureTime IsActivated="true">20</ExposureTime>
@@ -103,14 +103,68 @@
                       </CameraFrameSetup>
                     </DataGrabberSetup>
                     <FluorescenceDye>
-                      <Name>EGFP</Name>
-                      <ShortName>EGFP</ShortName>
-                      <Description></Description>
+                      <Name>Fura-2 in pH 7.2 Ca free</Name>
+                      <ShortName>F2</ShortName>
+                      <Description />
                       <IlluminationType>Fluorescence</IlluminationType>
                       <ContrastMethods>ReflectedLightFluorescence</ContrastMethods>
                       <ContrastTypes>Unknown</ContrastTypes>
-                      <Color>#FF00FF5B</Color>
-                      <dye_id>McNamara-Boswell-0828</dye_id>
+                      <Color>#FF00FF36</Color>
+                      <dye_id>McNamara-Boswell-0185</dye_id>
+                      <collection_id>66071726-cbd4-4c41-b371-0a6eee4ae9c5</collection_id>
+                    </FluorescenceDye>
+                  </Channel>
+                </Channels>
+              </Track>
+              <Track IsActivated="true" IsSelected="true">
+                <DetectionModeSetup>
+                  <Zeiss.Micro.Acquisition.WfTrackDetectionMode />
+                </DetectionModeSetup>
+                <BeforeHardwareSetting>Before [F2C]</BeforeHardwareSetting>
+                <AfterHardwareSetting>After [F2C]</AfterHardwareSetting>
+                <IsExtendedSetupModificationWarningShown>false</IsExtendedSetupModificationWarningShown>
+                <TrackName></TrackName>
+                <ZStackMode>Yes</ZStackMode>
+                <UseZStackCenter>true</UseZStackCenter>
+                <ZStackSliceIndex>1</ZStackSliceIndex>
+                <IsDisabledForApoTome>false</IsDisabledForApoTome>
+                <FocusOffset>0</FocusOffset>
+                <DirectDevice>MTBFLLEDControllerCombiner</DirectDevice>
+                <Channels>
+                  <Channel IsActivated="true" IsSelected="true" ChannelSetupId="635818073644009974" Name="Fura-2 in pH 7.2 Ca saturated" Description="">
+                    <Color>#FFFF0000</Color>
+                    <PixelShiftX>0</PixelShiftX>
+                    <PixelShiftY>0</PixelShiftY>
+                    <TemplateName>Fluorescence_Auto_Best-Fit</TemplateName>
+                    <Gamma>0.79999999999999982</Gamma>
+                    <Low>0.00050739307417494144</Low>
+                    <High>0.0078491454801951077</High>
+                    <LowerBestFit>2</LowerBestFit>
+                    <UpperBestFit>0.01</UpperBestFit>
+                    <UseDisplayValues>true</UseDisplayValues>
+                    <BitCountRange>16</BitCountRange>
+                    <PixelType>Gray8</PixelType>
+                    <IsAutoApplyEnabled>true</IsAutoApplyEnabled>
+                    <AutoApplyMode>BestFit</AutoApplyMode>
+                    <DataGrabberSetup>
+                      <CameraFrameSetup Id="MTBCamera_MTBCameraPortChanger_Internal.TestCam">
+                        <ExposureTime IsActivated="true">20</ExposureTime>
+                        <Adjust IsActivated="true">1</Adjust>
+                        <AutoExposure IsActivated="true">false</AutoExposure>
+                        <EMGain IsActivated="true">0</EMGain>
+                        <ShadingReference IsActivated="true">false</ShadingReference>
+                        <ShadingReferenceSource IsActivated="true">1</ShadingReferenceSource>
+                      </CameraFrameSetup>
+                    </DataGrabberSetup>
+                    <FluorescenceDye>
+                      <Name>Fura-2 in pH 7.2 Ca saturated</Name>
+                      <ShortName>F2C</ShortName>
+                      <Description />
+                      <IlluminationType>Fluorescence</IlluminationType>
+                      <ContrastMethods>ReflectedLightFluorescence</ContrastMethods>
+                      <ContrastTypes>Unknown</ContrastTypes>
+                      <Color>#FF00FF6B</Color>
+                      <dye_id>McNamara-Boswell-0187</dye_id>
                       <collection_id>66071726-cbd4-4c41-b371-0a6eee4ae9c5</collection_id>
                     </FluorescenceDye>
                   </Channel>
@@ -152,11 +206,6 @@
             <IsFocusSurfaceOutlierRemovingEnabled>true</IsFocusSurfaceOutlierRemovingEnabled>
             <FocusSurfaceOutlierExpansionDegree>1</FocusSurfaceOutlierExpansionDegree>
             <FocusSurfaceOutlierThresholdSigma>2.75</FocusSurfaceOutlierThresholdSigma>
-            <DelayAfterStageMove>0</DelayAfterStageMove>
-            <OnlineStitchingParameter>
-              <UseFocusReferenceChannel>true</UseFocusReferenceChannel>
-              <ReferenceChannelId>0</ReferenceChannelId>
-            </OnlineStitchingParameter>
             <AllowedScanArea IsActivated="false">
               <ContourType>Rectangle</ContourType>
               <Center>0,0</Center>
@@ -165,40 +214,39 @@
             <TileRegions />
             <SingleTileRegions />
             <SingleTileRegionArrays />
-            <Template Name="Petri Dish 35 mm">
-              <AnchorPoint>0,0</AnchorPoint>
-              <BoundsSize>35000,35000</BoundsSize>
-              <Category>PetriDish</Category>
+            <Template Name="Multichamber 96">
+              <AnchorPoint>-9900,-2750</AnchorPoint>
+              <BoundsSize>127800,85500</BoundsSize>
+              <Category>Multichamber</Category>
               <HasRegularShapes>true</HasRegularShapes>
-              <ReferencePoint>17500,17500</ReferencePoint>
-              <ReferencePointLocationMode>Center</ReferencePointLocationMode>
-              <ShapeType>Ellipse</ShapeType>
-              <ShapeColumns>1</ShapeColumns>
-              <ShapeRows>1</ShapeRows>
-              <ShapeWidth>30000</ShapeWidth>
-              <ShapeHeight>30000</ShapeHeight>
-              <ShapeDistanceX>0</ShapeDistanceX>
-              <ShapeDistanceY>0</ShapeDistanceY>
-              <OriginalShapeWidth>30000</OriginalShapeWidth>
-              <OriginalShapeHeight>30000</OriginalShapeHeight>
-              <OriginalShapeDistanceX>0</OriginalShapeDistanceX>
-              <OriginalShapeDistanceY>0</OriginalShapeDistanceY>
+              <ReferencePoint>0,0</ReferencePoint>
+              <ReferencePointLocationMode>TopLeft</ReferencePointLocationMode>
+              <ShapeType>Rectangle</ShapeType>
+              <ShapeColumns>12</ShapeColumns>
+              <ShapeRows>8</ShapeRows>
+              <ShapeWidth>7250</ShapeWidth>
+              <ShapeHeight>7250</ShapeHeight>
+              <ShapeDistanceX>9000</ShapeDistanceX>
+              <ShapeDistanceY>9000</ShapeDistanceY>
+              <OriginalShapeWidth>7250</OriginalShapeWidth>
+              <OriginalShapeHeight>7250</OriginalShapeHeight>
+              <OriginalShapeDistanceX>9000</OriginalShapeDistanceX>
+              <OriginalShapeDistanceY>9000</OriginalShapeDistanceY>
               <AreShapesCenteredX>true</AreShapesCenteredX>
               <AreShapesCenteredY>true</AreShapesCenteredY>
               <ShapesDistanceToBorderX>0</ShapesDistanceToBorderX>
               <ShapesDistanceToBorderY>0</ShapesDistanceToBorderY>
               <Rotation>0</Rotation>
-              <ImmersionPoint>17500,3000</ImmersionPoint>
+              <ImmersionPoint>63900,42750</ImmersionPoint>
               <BottomMaterial>Glass</BottomMaterial>
               <BottomThickness>170</BottomThickness>
-              <BottomOffset>700</BottomOffset>
+              <BottomOffset>1500</BottomOffset>
               <BottomOffsetMeasured>NaN</BottomOffsetMeasured>
               <BottomRefractiveIndex>1.52</BottomRefractiveIndex>
-              <InsertType>PartOfInsert</InsertType>
+              <InsertType>Default</InsertType>
               <PartOfInsertName></PartOfInsertName>
               <BottomColor>Unknown</BottomColor>
-              <UsageHints></UsageHints>
-              <BottomDetectionPoint>17500,17500</BottomDetectionPoint>
+              <BottomDetectionShape>D6</BottomDetectionShape>
               <SupportPoints />
             </Template>
           </SampleHolder>
@@ -221,7 +269,6 @@
           <Offset>0</Offset>
           <RefractiveIndexCorrection>1</RefractiveIndexCorrection>
           <UseFocusBacklashCorrection>true</UseFocusBacklashCorrection>
-          <DelayAfterFocusMove>0</DelayAfterFocusMove>
           <First>
             <Distance>
               <Value>-2E-06</Value>
@@ -267,16 +314,9 @@
           <Detectors>
             <Camera Id="MTBCamera_MTBCameraPortChanger_Internal.TestCam">
               <BinningList Status="Valid">0</BinningList>
-              <FrameRateTarget Status="Valid">4</FrameRateTarget>
-              <ImagePath Status="Valid">c:\TFS\Doc\3-ZIS\3-Development\Discussions\ExpFeedback\DVD\Testimages\FakeTracks</ImagePath>
-              <SimulateExposure Status="Valid">true</SimulateExposure>
-              <CameraBias Status="Valid">0</CameraBias>
-              <PerformFunction Status="Valid">0</PerformFunction>
-              <CameraDisplayName Status="Valid">Test CCD 1</CameraDisplayName>
-              <Frame Status="Valid">0,0,300,300</Frame>
-              <AcquisitionFrame Status="Valid">0,0,300,300</AcquisitionFrame>
-              <ImageMode Status="Valid">0</ImageMode>
-              <Resolution Status="Valid">0</Resolution>
+              <ImagePath Status="Valid">C:\TFS\Doc\3-ZIS\3-Development\Discussions\ExperimentFeedback\Release_DVD\CCD_Testimages_Folder\Fura_Ca_Imaging_60frames</ImagePath>
+              <Frame Status="Valid">0,0,492,424</Frame>
+              <PerformFunction Status="Valid">1</PerformFunction>
             </Camera>
           </Detectors>
           <Devices />
@@ -284,21 +324,85 @@
         <AutoImmersionSetup IsActivated="false">
           <ImmersionTimeInterval>10</ImmersionTimeInterval>
           <ImmersionTravelDistance>5</ImmersionTravelDistance>
-          <ImmersionRemovePositionX>Infinity</ImmersionRemovePositionX>
-          <ImmersionRemovePositionY>Infinity</ImmersionRemovePositionY>
-          <IsBubbleEliminationMovementEnabled>false</IsBubbleEliminationMovementEnabled>
-          <BubbleEliminationMovementTargetX>20000</BubbleEliminationMovementTargetX>
-          <BubbleEliminationMovementTargetY>20000</BubbleEliminationMovementTargetY>
+          <ImmersionRemovePositionX>INF</ImmersionRemovePositionX>
+          <ImmersionRemovePositionY>INF</ImmersionRemovePositionY>
         </AutoImmersionSetup>
         <BleachingSetup IsActivated="false">
           <BleachSettingsName>not defined</BleachSettingsName>
           <BleachSettingsType></BleachSettingsType>
         </BleachingSetup>
-        <DynamicsSetup IsActivated="false" GraphicScale="1" Id="636102243198922101">
+        <DynamicsSetup IsActivated="false" GraphicScale="1">
           <Appliances>
-            <MeasurementSettings />
+            <ViewMode>
+              <ShowRatioView>true</ShowRatioView>
+              <Mode>ImageChartViewMode</Mode>
+              <ShowViewCaptions>true</ShowViewCaptions>
+              <FollowAcquisition>true</FollowAcquisition>
+              <ShowTimeLineView>true</ShowTimeLineView>
+              <ShowMarkerSwitch>true</ShowMarkerSwitch>
+            </ViewMode>
+            <MeasurementSettings>
+              <FeatureMode>IntensityMean</FeatureMode>
+              <CorrectionMode>None</CorrectionMode>
+              <ConstantBackgroundValue>0</ConstantBackgroundValue>
+              <MeasureRois />
+            </MeasurementSettings>
+            <ChartSettings>
+              <XAxisUnitType>Auto</XAxisUnitType>
+              <XAxisUnit></XAxisUnit>
+              <XAxisScalingType>Fixed</XAxisScalingType>
+              <YAxisScalingType>Auto</YAxisScalingType>
+              <XAxisMaxValue>0</XAxisMaxValue>
+              <XAxisMinValue>0</XAxisMinValue>
+              <MaxXAxisMinValue>0</MaxXAxisMinValue>
+              <YAxisMaxValue>0</YAxisMaxValue>
+              <YAxisMinValue>0</YAxisMinValue>
+              <MaxYAxisLeftMinValue>0</MaxYAxisLeftMinValue>
+              <MaxYAxisRightMinValue>0</MaxYAxisRightMinValue>
+              <TickSettingType>Auto</TickSettingType>
+              <TickSettingMajor>0</TickSettingMajor>
+              <TickSettingMajorMin>0</TickSettingMajorMin>
+              <TickSettingMinimum>0</TickSettingMinimum>
+              <TickSettingMinimumMin>0</TickSettingMinimumMin>
+              <TickSettingMinimumMax>0</TickSettingMinimumMax>
+            </ChartSettings>
             <DisplaySetting>
-              <Channels />
+              <Channels>
+                <Channel Id="Channel:0" Name="Fura-2 in pH 7.2 Ca free">
+                  <Low>0.00922389868029555</Low>
+                  <High>0.28446917731205584</High>
+                  <Gamma>0.79999999999999982</Gamma>
+                  <IsAutoApplyEnabled>true</IsAutoApplyEnabled>
+                  <AutoApplyMode>BestFit</AutoApplyMode>
+                  <BitCountRange>16</BitCountRange>
+                  <DyeName>Fura-2 in pH 7.2 Ca free</DyeName>
+                  <ShortName>F2</ShortName>
+                  <IlluminationType>Fluorescence</IlluminationType>
+                  <DyeMaxEmission>515</DyeMaxEmission>
+                  <DyeMaxExcitation>366</DyeMaxExcitation>
+                  <DyeId>McNamara-Boswell-0185</DyeId>
+                  <DyeDatabaseId>66071726-cbd4-4c41-b371-0a6eee4ae9c5</DyeDatabaseId>
+                  <Color>#FF00FF36</Color>
+                  <OriginalColor>#FF00FF36</OriginalColor>
+                </Channel>
+                <Channel Id="Channel:1" Name="Fura-2 in pH 7.2 Ca saturated">
+                  <Low>0.007153450249984406</Low>
+                  <High>0.99876071837558511</High>
+                  <Gamma>0.79999999999999982</Gamma>
+                  <IsAutoApplyEnabled>true</IsAutoApplyEnabled>
+                  <AutoApplyMode>BestFit</AutoApplyMode>
+                  <BitCountRange>16</BitCountRange>
+                  <DyeName>Fura-2 in pH 7.2 Ca saturated</DyeName>
+                  <ShortName>F2C</ShortName>
+                  <IlluminationType>Fluorescence</IlluminationType>
+                  <DyeMaxEmission>505</DyeMaxEmission>
+                  <DyeMaxExcitation>336</DyeMaxExcitation>
+                  <DyeId>McNamara-Boswell-0187</DyeId>
+                  <DyeDatabaseId>66071726-cbd4-4c41-b371-0a6eee4ae9c5</DyeDatabaseId>
+                  <Color>#FFFF0000</Color>
+                  <OriginalColor>#FFFF0000</OriginalColor>
+                </Channel>
+              </Channels>
             </DisplaySetting>
           </Appliances>
         </DynamicsSetup>
@@ -311,7 +415,7 @@
           <RepetitionSettingsMode>Standard</RepetitionSettingsMode>
           <FocusStrategy IsActivated="true">
             <StrategyMode>None</StrategyMode>
-            <ReferenceChannelId>635829983713335167</ReferenceChannelId>
+            <ReferenceChannelId>635818073386574230</ReferenceChannelId>
             <IsFocussingOnAllTracks>false</IsFocussingOnAllTracks>
             <IsFocussingBeforeAcquisition>true</IsFocussingBeforeAcquisition>
             <FixedZPosition>0</FixedZPosition>
@@ -327,7 +431,6 @@
             <PositionedRegionsUpdateMode>CumulatedPositions</PositionedRegionsUpdateMode>
             <BreakAfterSupportPointsDetermination>false</BreakAfterSupportPointsDetermination>
             <ErrorNotificationHints>None</ErrorNotificationHints>
-            <AdditionalSupportPointOffset>0</AdditionalSupportPointOffset>
             <TimeSeriesIntervalInfo>
               <IsActivated>false</IsActivated>
               <IsMainIntervalEnabled>true</IsMainIntervalEnabled>
@@ -369,7 +472,6 @@
           </HardwareAutofocus>
           <SoftwareAutofocus>
             <ReflectionMode>Disabled</ReflectionMode>
-            <ReflectionModeOffset>-120</ReflectionModeOffset>
             <AutofocusRegion>
               <X>0</X>
               <Y>0</Y>
@@ -377,7 +479,7 @@
               <DY>1</DY>
             </AutofocusRegion>
             <BacklashStepsize>2</BacklashStepsize>
-            <DepthOfFocus>5.88</DepthOfFocus>
+            <DepthOfFocus>5.95</DepthOfFocus>
             <DoBacklashCorrection>-1</DoBacklashCorrection>
             <DoBleachingCorrection>true</DoBleachingCorrection>
             <FactorGaussianFitStepsize>10</FactorGaussianFitStepsize>
@@ -387,7 +489,7 @@
             <Precision>4</Precision>
             <PredefinedStepsize>Optimal</PredefinedStepsize>
             <SharpnessMeasureMethod>Auto</SharpnessMeasureMethod>
-            <RelativeSearchRange>235.2</RelativeSearchRange>
+            <RelativeSearchRange>238</RelativeSearchRange>
             <SearchRangeType>Relative</SearchRangeType>
             <SearchStrategy>Exhaustive</SearchStrategy>
             <SharpnessMeasureSet Name="Best">
@@ -428,21 +530,21 @@
           <HoldTime>0</HoldTime>
           <RampType>TimeSeries</RampType>
         </LinkamRampSetup>
-        <RatioSetup IsActivated="false">
+        <RatioSetup IsActivated="true">
           <IsRatioImageGenerated>false</IsRatioImageGenerated>
           <SelectedColorMode>Palette</SelectedColorMode>
           <Color>#00FFFFFF</Color>
           <PaletteName>rainbow</PaletteName>
           <RatioDisplayMinimum>0</RatioDisplayMinimum>
           <RatioDisplayMaximum>10</RatioDisplayMaximum>
-          <RatioMethod>SingleWavelength</RatioMethod>
-          <SelectedReferenceIdChannel1>0</SelectedReferenceIdChannel1>
-          <SelectedReferenceIdChannel2>0</SelectedReferenceIdChannel2>
-          <RatioBackgroundCorrection>None</RatioBackgroundCorrection>
-          <BackgroundCorrectionChannel1>0</BackgroundCorrectionChannel1>
-          <BackgroundCorrectionChannel2>0</BackgroundCorrectionChannel2>
+          <RatioMethod>DualWavelength</RatioMethod>
+          <SelectedReferenceIdChannel1>635818073386574230</SelectedReferenceIdChannel1>
+          <SelectedReferenceIdChannel2>635818073644009974</SelectedReferenceIdChannel2>
+          <RatioBackgroundCorrection>ConstantIntegerValue</RatioBackgroundCorrection>
+          <BackgroundCorrectionChannel1>50</BackgroundCorrectionChannel1>
+          <BackgroundCorrectionChannel2>50</BackgroundCorrectionChannel2>
           <AverageFrame>5</AverageFrame>
-          <Multiplicator>1</Multiplicator>
+          <Multiplicator>10</Multiplicator>
           <IsOptionalThreshold>false</IsOptionalThreshold>
           <OptionalThresholdChannel1>0</OptionalThresholdChannel1>
           <OptionalThresholdChannel2>0</OptionalThresholdChannel2>
@@ -468,12 +570,11 @@
           <UseAutoBC>false</UseAutoBC>
           <ScanSpeedForBCTraining>0</ScanSpeedForBCTraining>
         </CPMFocusSetup>
-        <DisableBlankingSetup IsActivated="false" />
       </HelperSetups>
     </AcquisitionBlock>
   </ExperimentBlocks>
   <HardwareSettingsPool>
-    <HardwareSetting Name="Before Exp [EGFP] Smart">
+    <HardwareSetting Name="Before Exp [F2] Smart">
       <ParameterCollection Id="MTBTLHalogenLamp">
         <LampMode IsActivated="true">Standby</LampMode>
         <Intensity IsActivated="true">0</Intensity>
@@ -507,7 +608,7 @@
         <Intensity IsActivated="true">0</Intensity>
       </ParameterCollection>
     </HardwareSetting>
-    <HardwareSetting Name="After Exp [EGFP] Smart">
+    <HardwareSetting Name="After Exp [F2] Smart">
       <ParameterCollection Id="MTBTLHalogenLamp">
         <LampMode IsActivated="true">Standby</LampMode>
         <Intensity IsActivated="true">0</Intensity>
@@ -541,7 +642,7 @@
         <Intensity IsActivated="true">0</Intensity>
       </ParameterCollection>
     </HardwareSetting>
-    <HardwareSetting Name="Before [EGFP] Smart">
+    <HardwareSetting Name="Before [F2] Smart">
       <ParameterCollection Id="MTBBeamsplitterChanger">
         <Position IsActivated="true">3</Position>
         <PositionName IsActivated="true">Beamsplitter.489092-0130-000</PositionName>
@@ -549,9 +650,9 @@
       <ParameterCollection Id="MTBFLLEDController_1">
         <LampMode Status="Valid" IsActivated="true">Gated</LampMode>
       </ParameterCollection>
-      <ParameterCollection Id="MTBLED2_1">
+      <ParameterCollection Id="MTBLED1_1">
         <IsEnabled Status="Valid" IsActivated="true">true</IsEnabled>
-        <Intensity Status="Valid" IsActivated="true">9.7751710654937</Intensity>
+        <Intensity Status="Valid" IsActivated="true">50</Intensity>
       </ParameterCollection>
       <ParameterCollection Id="MTBEmissionFilterChanger">
         <Position IsActivated="true">3</Position>
@@ -564,7 +665,7 @@
       <ParameterCollection Id="MTBFLLEDController_2">
         <LampMode Status="Valid" IsActivated="true">Gated</LampMode>
       </ParameterCollection>
-      <ParameterCollection Id="MTBLED1_1">
+      <ParameterCollection Id="MTBLED2_1">
         <IsEnabled Status="Valid" IsActivated="true">false</IsEnabled>
         <Intensity Status="Valid" IsActivated="true">0</Intensity>
       </ParameterCollection>
@@ -593,376 +694,120 @@
         <Intensity Status="Valid" IsActivated="true">0</Intensity>
       </ParameterCollection>
     </HardwareSetting>
-    <HardwareSetting Name="After [EGFP] Smart">
+    <HardwareSetting Name="After [F2] Smart">
+      <ParameterCollection Id="MTBLED1_1">
+        <IsEnabled IsActivated="true">false</IsEnabled>
+        <Intensity IsActivated="true">0</Intensity>
+      </ParameterCollection>
+    </HardwareSetting>
+    <HardwareSetting Name="Before [F2C]">
+      <ParameterCollection Id="MTBBeamsplitterChanger">
+        <Position IsActivated="true">3</Position>
+        <PositionName IsActivated="true">Beamsplitter.489092-0130-000</PositionName>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBFLLEDController_1">
+        <LampMode Status="Valid" IsActivated="true">Gated</LampMode>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBLED1_1">
+        <IsEnabled Status="Valid" IsActivated="true">true</IsEnabled>
+        <Intensity Status="Valid" IsActivated="true">50</Intensity>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBEmissionFilterChanger">
+        <Position IsActivated="true">3</Position>
+        <PositionName IsActivated="true">EmissionFilter.489092-0120-000</PositionName>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBCameraPortChanger">
+        <Position IsActivated="true">2</Position>
+        <PositionName IsActivated="true">Pollux.CameraChangerElement_Internal</PositionName>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBFLLEDController_2">
+        <LampMode Status="Valid" IsActivated="true">Gated</LampMode>
+      </ParameterCollection>
       <ParameterCollection Id="MTBLED2_1">
+        <IsEnabled Status="Valid" IsActivated="true">false</IsEnabled>
+        <Intensity Status="Valid" IsActivated="true">0</Intensity>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBLED3_1">
+        <IsEnabled Status="Valid" IsActivated="true">false</IsEnabled>
+        <Intensity Status="Valid" IsActivated="true">0</Intensity>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBLED4_1">
+        <IsEnabled Status="Valid" IsActivated="true">true</IsEnabled>
+        <Intensity Status="Valid" IsActivated="true">50</Intensity>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBLED1_2">
+        <IsEnabled Status="Valid" IsActivated="true">false</IsEnabled>
+        <Intensity Status="Valid" IsActivated="true">61.483253588517</Intensity>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBLED2_2">
+        <IsEnabled Status="Valid" IsActivated="true">false</IsEnabled>
+        <Intensity Status="Valid" IsActivated="true">0</Intensity>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBLED3_2">
+        <IsEnabled Status="Valid" IsActivated="true">false</IsEnabled>
+        <Intensity Status="Valid" IsActivated="true">0</Intensity>
+      </ParameterCollection>
+      <ParameterCollection Id="MTBLED4_2">
+        <IsEnabled Status="Valid" IsActivated="true">false</IsEnabled>
+        <Intensity Status="Valid" IsActivated="true">0</Intensity>
+      </ParameterCollection>
+    </HardwareSetting>
+    <HardwareSetting Name="After [F2C]">
+      <ParameterCollection Id="MTBLED1_1">
         <IsEnabled IsActivated="true">false</IsEnabled>
         <Intensity IsActivated="true">0</Intensity>
       </ParameterCollection>
     </HardwareSetting>
   </HardwareSettingsPool>
-  <ExperimentFeedback IsActivated="true">
+  <ExperimentFeedback IsActivated="false">
     <IsSynchronous>true</IsSynchronous>
     <IsSynchronousToAnalysis>true</IsSynchronousToAnalysis>
     <IsSynchronousToFile>false</IsSynchronousToFile>
     <AllowNonExperimentObservablesToTriggerScript>false</AllowNonExperimentObservablesToTriggerScript>
     <DeadlockTimeout>10</DeadlockTimeout>
-    <PreScript>from System import Array
+    <PreScript># here we initialize some kind of index counter by setting it to Zero.
+lastindex = 0
+action_taken = False
+RF = 1.5 # ratio activation factor --&gt; when ratio/initial_ration &gt; RF --&gt; Activation Event
+interval_initial = 1000.0 # this is the initial exposure time
+interval_fast    = 200.0  # desired FASTER exposure time after an activation event was detected</PreScript>
+    <LoopScript># to analyze the 1st frame does not really make sense
+# Retrieve the current TimePoint Index
+index = ZenService.Experiment.CurrentTimePointIndex
 
-# define header for the oitput logfile to your needs - Timeframe - ObjectID - ObjStageX - ObjStageY
-logfile = ZenService.Xtra.System.AppendLogLine('T\tObjID\tStageX\tStageY')
+# get intial ratio value to compare with from the frame 2
+if (index==2  and (index &lt; lastindex or index &gt; lastindex)):
+    initial_ratio = round(ZenService.Analysis.ROIS.DynamicRois[1].Ratio,2)
+    i1 = round(ZenService.Analysis.ROIS.DynamicRois[1].IntensityMean[1],0)
+    i2 = round(ZenService.Analysis.ROIS.DynamicRois[1].IntensityMean[2],0)
+    # write to log file (optional)
+    logfile = ZenService.Xtra.System.AppendLogLine(str(index) +'\t' + str(i1) + '\t' + str(i2) + '\t'+str(initial_ratio))
+    # update the index counter
+    lastindex = index
 
-# creates a readable string from all entries of an array
-def createstr(arrayin):
-    dim = len(arrayin)
-    strout = ''
-    for i in range(0,dim):
-        if (i &lt; dim-1): 
-            strout = strout + str(round(arrayin[i],2)) + '\t' # add tab at the end if it is NOT the last entry
-        else:
-            strout = strout + str(round(arrayin[i],2)) # no tab since it is the last entry
-    return strout</PreScript>
-    <LoopScript># get total number of objects and frame number
-num_obj = ZenService.Analysis.AllParticles.RegionsCount
-frame = ZenService.Experiment.CurrentTimePointIndex
-
-# get current stage position XY of the image center
-imgX = ZenService.Analysis.AllParticles.ImageStageXPosition
-imgY = ZenService.Analysis.AllParticles.ImageStageYPosition
-
-# get current object positions and intensity arrays for all detected objects
-posx = ZenService.Analysis.SingleParticle.BoundCenterXStage
-posy = ZenService.Analysis.SingleParticle.BoundCenterYStage
-intensities = ZenService.Analysis.SingleParticle.IntensityMean_EGFP
-
-# get ID of the brightest detected particle
-ID = Array.IndexOf(intensities, max(intensities))
-
-# move the stage to the position of the brightest particle --&gt;
-ZenService.HardwareActions.SetStagePosition(posx[ID], posy[ID])
-
-# create strings for optional output for testing --&gt; comment when not used:
-POSX = createstr(posx)          # array with all StageX positions
-POSY = createstr(posy)          # array with all StageY positions
-INTS = createstr(intensities)   # array with all intensities
-
-# write positions to data log file
-logfile = ZenService.Xtra.System.AppendLogLine(str(frame)+'\t'+str(ID+1)+'\t'+'{:.2f}'.format(posy[ID])+'\t'+'{:.2f}'.format(posy[ID]))</LoopScript>
-    <PostScript># this is all optional
-ZenService.Xtra.System.ExecuteExternalProgram(r'C:\Program Files (x86)\Notepad++\notepad++.exe', logfile)</PostScript>
-    <IsWarningPopupShown>true</IsWarningPopupShown>
-    <AreDebugMessagesEnabled>false</AreDebugMessagesEnabled>
-    <AnalysisScript Name="tracking.czias">
-      <Version>1.1</Version>
-      <TilingMode>NoTiling</TilingMode>
-      <TileSize>0</TileSize>
-      <MaxParticleSize>0</MaxParticleSize>
-      <MaxDisplaySize>3500</MaxDisplaySize>
-      <HiliteColor>#FFFF0000</HiliteColor>
-      <HiliteLineWidth>1</HiliteLineWidth>
-      <Script Name="Builtin Multichannel">
-        <SegmenterSource>SegmenterBuiltinDefault</SegmenterSource>
-      </Script>
-      <SubImageDimension>C</SubImageDimension>
-      <RegionClass Name="Root" Id="0">
-        <Type>Or</Type>
-        <Color>#FFFFFFFF</Color>
-        <RegionClass Name="AllParticles" Id="1">
-          <Type>Collection</Type>
-          <Color>#FFB40000</Color>
-          <ParametersCollection>
-            <Parameters Key="Segmentation" Name="SegmenterClassBuiltinDefault" />
-          </ParametersCollection>
-          <Features>
-            <Features>
-              <Feature Name="RegionsCount" IsDisplayEnabled="true" />
-              <Feature Name="ImageAcquisitionTime" />
-              <Feature Name="ImageIndexTime" />
-              <Feature Name="ImageStageXPosition" />
-              <Feature Name="ImageStageYPosition" />
-            </Features>
-          </Features>
-          <RegionClass Name="SingleParticle" Id="2">
-            <Type>Single</Type>
-            <ChannelName>EGFP</ChannelName>
-            <Color>#FF00CCFF</Color>
-            <Overlap>60</Overlap>
-            <ParametersCollection>
-              <Parameters Key="Segmentation" Name="SegmenterClassBuiltinDefault">
-                <Parameter Key="Smoothing1">
-                  <Source>Smoothing</Source>
-                  <IsInteractive>false</IsInteractive>
-                  <Mode>Median</Mode>
-                  <LowpassKernelSize>3</LowpassKernelSize>
-                  <MedianKernelSize>3</MedianKernelSize>
-                  <GaussSigma>2</GaussSigma>
-                </Parameter>
-                <Parameter Key="Sharpening1">
-                  <Source>Sharpening</Source>
-                  <MustExecute>false</MustExecute>
-                  <IsInteractive>false</IsInteractive>
-                  <Mode>None</Mode>
-                  <DelineateThreshold>0</DelineateThreshold>
-                  <DelineateSize>1</DelineateSize>
-                  <UnsharpRadius>2</UnsharpRadius>
-                  <UnsharpStrength>1</UnsharpStrength>
-                </Parameter>
-                <Parameter Key="MinArea1">
-                  <Source>MinArea</Source>
-                  <IsInteractive>false</IsInteractive>
-                  <Minimum>1</Minimum>
-                  <Value>50</Value>
-                  <Maximum>1000</Maximum>
-                  <SmallChange>1</SmallChange>
-                </Parameter>
-                <Parameter Key="ThresholdHistogram1">
-                  <Source>ThresholdHistogram</Source>
-                  <Minimum1>0</Minimum1>
-                  <ValueLower1>53</ValueLower1>
-                  <ValueUpper1>249</ValueUpper1>
-                  <Maximum1>255</Maximum1>
-                  <Minimum2>0</Minimum2>
-                  <ValueLower2>0</ValueLower2>
-                  <ValueUpper2>0</ValueUpper2>
-                  <Maximum2>255</Maximum2>
-                  <Minimum3>0</Minimum3>
-                  <ValueLower3>0</ValueLower3>
-                  <ValueUpper3>0</ValueUpper3>
-                  <Maximum3>255</Maximum3>
-                  <IsHLS>false</IsHLS>
-                  <IsValid1>true</IsValid1>
-                  <IsValid2>false</IsValid2>
-                  <IsValid3>false</IsValid3>
-                  <AnalysisThresholdMode>Automatic</AnalysisThresholdMode>
-                  <AutomaticThresholdMethod>TriangleThreshold</AutomaticThresholdMethod>
-                  <AnalysisThresholdShapeMode>Polygon</AnalysisThresholdShapeMode>
-                  <PickSize>1</PickSize>
-                  <PickTolerance>3</PickTolerance>
-                </Parameter>
-                <Parameter Key="Fill1">
-                  <Name>@ImageAnalysisWizard_SegmentationFill</Name>
-                  <Source>Boolean</Source>
-                  <IsInteractive>false</IsInteractive>
-                  <Value>false</Value>
-                </Parameter>
-                <Parameter Key="Separate1">
-                  <Source>Separate</Source>
-                  <MustExecute>false</MustExecute>
-                  <IsInteractive>false</IsInteractive>
-                  <Mode>None</Mode>
-                  <Count>3</Count>
-                </Parameter>
-              </Parameters>
-            </ParametersCollection>
-            <InteractiveParameters>
-              <Parameter Key="RegionEdit1">
-                <Source>RegionEdit</Source>
-                <IsInteractive>false</IsInteractive>
-                <EditMethod>Draw</EditMethod>
-              </Parameter>
-              <Parameter Key="RegionGrow1">
-                <Source>RegionGrow</Source>
-                <IsInteractive>false</IsInteractive>
-                <IntensityTolerance>10</IntensityTolerance>
-                <ColorTolerance>10</ColorTolerance>
-                <Fill>false</Fill>
-              </Parameter>
-            </InteractiveParameters>
-            <Conditions>
-              <Condition Key="MinMax1">
-                <Name>MinMax</Name>
-                <Source>ConditionMinMax</Source>
-              </Condition>
-            </Conditions>
-            <Features>
-              <Features>
-                <Feature Name="ID" IsDisplayEnabled="true" />
-                <Feature Name="CenterX" />
-                <Feature Name="CenterY" />
-                <Feature Name="IntensityMean" ChannelName="EGFP" />
-                <Feature Name="BoundCenterXStage" />
-                <Feature Name="BoundCenterYStage" />
-              </Features>
-            </Features>
-            <DrawFeatures>
-              <Features>
-                <Feature Name="DrawCenter" IsDisplayEnabled="true" />
-              </Features>
-            </DrawFeatures>
-          </RegionClass>
-        </RegionClass>
-      </RegionClass>
-      <RegionClassTemplate Name="RootTemplate" Id="0">
-        <Type>Or</Type>
-        <Color>#FFFFFFFF</Color>
-        <RegionClass Name="Classes" Id="11">
-          <Type>Collection</Type>
-          <Color>#FFB40000</Color>
-          <Features>
-            <Features>
-              <Feature Name="RegionsCount" />
-            </Features>
-          </Features>
-          <RegionClass Name="Class" Id="12">
-            <Type>Single</Type>
-            <Color>#FFFF0000</Color>
-            <Overlap>60</Overlap>
-            <ParametersCollection>
-              <Parameters Key="Segmentation" Name="SegmenterClassBuiltinDefault">
-                <Parameter Key="Smoothing1">
-                  <Source>Smoothing</Source>
-                  <MustExecute>false</MustExecute>
-                  <IsInteractive>false</IsInteractive>
-                  <Mode>None</Mode>
-                  <LowpassKernelSize>3</LowpassKernelSize>
-                  <MedianKernelSize>3</MedianKernelSize>
-                  <GaussSigma>1.3</GaussSigma>
-                </Parameter>
-                <Parameter Key="Sharpening1">
-                  <Source>Sharpening</Source>
-                  <IsInteractive>false</IsInteractive>
-                  <Mode>None</Mode>
-                  <DelineateThreshold>0</DelineateThreshold>
-                  <DelineateSize>1</DelineateSize>
-                  <UnsharpRadius>2</UnsharpRadius>
-                  <UnsharpStrength>1</UnsharpStrength>
-                </Parameter>
-                <Parameter Key="MinArea1">
-                  <Source>MinArea</Source>
-                  <IsInteractive>false</IsInteractive>
-                  <Minimum>1</Minimum>
-                  <Value>1</Value>
-                  <Maximum>1000</Maximum>
-                  <SmallChange>1</SmallChange>
-                </Parameter>
-                <Parameter Key="ThresholdHistogram1">
-                  <Source>ThresholdHistogram</Source>
-                  <Minimum1>0</Minimum1>
-                  <ValueLower1>0</ValueLower1>
-                  <ValueUpper1>0</ValueUpper1>
-                  <Maximum1>255</Maximum1>
-                  <Minimum2>0</Minimum2>
-                  <ValueLower2>0</ValueLower2>
-                  <ValueUpper2>0</ValueUpper2>
-                  <Maximum2>255</Maximum2>
-                  <Minimum3>0</Minimum3>
-                  <ValueLower3>0</ValueLower3>
-                  <ValueUpper3>0</ValueUpper3>
-                  <Maximum3>255</Maximum3>
-                  <IsHLS>false</IsHLS>
-                  <IsValid1>false</IsValid1>
-                  <IsValid2>false</IsValid2>
-                  <IsValid3>false</IsValid3>
-                  <AnalysisThresholdMode>Click</AnalysisThresholdMode>
-                  <AutomaticThresholdMethod>Otsu</AutomaticThresholdMethod>
-                  <AnalysisThresholdShapeMode>Polygon</AnalysisThresholdShapeMode>
-                  <PickSize>1</PickSize>
-                  <PickTolerance>3</PickTolerance>
-                </Parameter>
-                <Parameter Key="Fill1">
-                  <Name>@ImageAnalysisWizard_SegmentationFill</Name>
-                  <Source>Boolean</Source>
-                  <IsInteractive>false</IsInteractive>
-                  <Value>false</Value>
-                </Parameter>
-                <Parameter Key="Separate1">
-                  <Source>Separate</Source>
-                  <IsInteractive>false</IsInteractive>
-                  <Mode>None</Mode>
-                  <Count>3</Count>
-                </Parameter>
-              </Parameters>
-            </ParametersCollection>
-            <InteractiveParameters>
-              <Parameter Key="RegionEdit1">
-                <Source>RegionEdit</Source>
-                <IsInteractive>false</IsInteractive>
-                <EditMethod>None</EditMethod>
-              </Parameter>
-              <Parameter Key="RegionGrow1">
-                <Source>RegionGrow</Source>
-                <IsInteractive>false</IsInteractive>
-                <IntensityTolerance>10</IntensityTolerance>
-                <ColorTolerance>10</ColorTolerance>
-                <Fill>false</Fill>
-              </Parameter>
-            </InteractiveParameters>
-            <Conditions>
-              <Condition Key="MinMax1">
-                <Name>MinMax</Name>
-                <Source>ConditionMinMax</Source>
-              </Condition>
-            </Conditions>
-            <Features>
-              <Features>
-                <Feature Name="ID" />
-                <Feature Name="Area" />
-                <Feature Name="Perimeter" />
-              </Features>
-            </Features>
-          </RegionClass>
-        </RegionClass>
-      </RegionClassTemplate>
-      <AnalysisStepCollection>
-        <AnalysisStep Name="Class">
-          <MustExecute>false</MustExecute>
-          <IsInteractive>false</IsInteractive>
-        </AnalysisStep>
-        <AnalysisStep Name="Frame">
-          <MustExecute>true</MustExecute>
-          <IsInteractive>false</IsInteractive>
-        </AnalysisStep>
-        <AnalysisStep Name="Segmentation">
-          <MustExecute>true</MustExecute>
-          <IsInteractive>false</IsInteractive>
-        </AnalysisStep>
-        <AnalysisStep Name="Condition">
-          <MustExecute>false</MustExecute>
-          <IsInteractive>false</IsInteractive>
-        </AnalysisStep>
-        <AnalysisStep Name="Interactive">
-          <MustExecute>true</MustExecute>
-          <IsInteractive>false</IsInteractive>
-        </AnalysisStep>
-        <AnalysisStep Name="Features">
-          <MustExecute>false</MustExecute>
-          <IsInteractive>false</IsInteractive>
-        </AnalysisStep>
-        <AnalysisStep Name="Measure">
-          <MustExecute>false</MustExecute>
-          <IsInteractive>false</IsInteractive>
-        </AnalysisStep>
-      </AnalysisStepCollection>
-      <AdditionalChannelSetting />
-      <AnalysisFrameTeach>
-        <Source>AnalysisFrameDefault</Source>
-      </AnalysisFrameTeach>
-      <AnalysisFrameRun>
-        <Source>AnalysisFrameDefault</Source>
-      </AnalysisFrameRun>
-      <AnalysisFeatures>
-        <Source>AnalysisFeaturesDefault</Source>
-      </AnalysisFeatures>
-      <AnalysisClass>
-        <Source>AnalysisClassDefault</Source>
-      </AnalysisClass>
-      <MeasureFrame>
-        <FrameMode>Inside</FrameMode>
-        <IsFrameMaximize>false</IsFrameMaximize>
-        <Complement>false</Complement>
-        <GraphicLayer>
-          <Usage>Edit</Usage>
-          <IsProtected>false</IsProtected>
-          <IsAnimationEnabled>false</IsAnimationEnabled>
-          <AnimationDimension>None</AnimationDimension>
-          <LayerFlags>1</LayerFlags>
-          <Elements />
-        </GraphicLayer>
-      </MeasureFrame>
-    </AnalysisScript>
+# check for an actication event from frame 3 on ...
+if (index &gt;=3 and (index &lt; lastindex or index &gt; lastindex)):
+    # intensity of channels substracted by background
+    ratio = round(ZenService.Analysis.ROIS.DynamicRois[1].Ratio,2)
+    i1 = round(ZenService.Analysis.ROIS.DynamicRois[1].IntensityMean[1],0)
+    i2 = round(ZenService.Analysis.ROIS.DynamicRois[1].IntensityMean[2],0)
+    # write to log file (optional)
+    logfile = ZenService.Xtra.System.AppendLogLine(str(index) +'\t' + str(i1) + '\t' + str(i2) + '\t'+
+            str(ratio) + '\t' + str(round(ratio/initial_ratio,2)))
+    # play sound if the cell got activated --&gt; ration is bigger than intial ration by a factor of RF
+    if (ratio/initial_ratio &gt; RF and action_taken == False):
+        ZenService.Xtra.System.PlaySound()
+        ZenService.Actions.SetTimeSeriesInterval(interval_fast, TimeUnit.ms)
+        action_taken = True
+    
+    # update the index counter
+    lastindex = index</LoopScript>
+    <PostScript>ZenService.Actions.SetTimeSeriesInterval(interval_initial, TimeUnit.ms) # restore exposure time from the start of the experiment
+ZenService.Xtra.System.ExecuteExternalProgram(r"C:\Program Files (x86)\Notepad++\notepad++.exe", logfile)</PostScript>
     <Actions />
   </ExperimentFeedback>
   <AdditionalSettings />
   <Metadata>
-    <ExperimentDuration>00:00:15s</ExperimentDuration>
+    <ExperimentDuration></ExperimentDuration>
   </Metadata>
 </HardwareExperiment>
