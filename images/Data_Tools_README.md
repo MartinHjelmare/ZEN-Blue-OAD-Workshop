@@ -4,6 +4,6 @@
 
 xxx
 
-[Testimage](https://github.com/sebi06/ZEN-Blue-OAD-Workshop/tree/master/images/Guided_Acquisition.png)
+![Testimage](https://github.com/sebi06/ZEN-Blue-OAD-Workshop/tree/master/images/Guided_Acquisition.png)
 
 [Testimage](images/Guided_Acquisition.png)
