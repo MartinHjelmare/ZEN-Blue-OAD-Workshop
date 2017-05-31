@@ -1,0 +1,19 @@
+backend     : qt4agg
+backend.qt4 : PyQt4
+
+axes.titlesize  : 9.0
+axes.labelsize  : 9.0 
+
+xtick.labelsize : 9.0
+ytick.labelsize : 9.0
+
+legend.fontsize : 9.0  
+
+font.family     : serif  
+font.serif      : Computer Modern Roman  
+
+text.antialiased : True
+text.dvipnghack  : None
+
+figure.figsize  : 7.3, 4.2  
+figure.dpi      : 80
