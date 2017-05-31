@@ -1,10 +1,8 @@
 ==================================
-ZEN Blue OAD Workshop
+OAD Scripts Descriptions
 ==================================
 
-OAD and Automated Microscopy – Smart Acquisition Strategies and Automation Tools
-ZEN Blue is an open, flexible and powerful image acquisition platform that allows controlling a wide range of microscopes system. Additionally it offers various tools to automate workflows including acquisition and image analysis tasks.
-Since that linkage and the automation of such workflows becomes increasingly ZENTo fulfill those demands the ZEN Blue platform offers various features and options, which are combined inside a concept called Open Application Development (OAD). It main components are:
+This sections describes the usage and the content of the OAD scripts
 
 *    Open CZI image data format
 *    Python Scripting
@@ -39,15 +37,19 @@ References
 Screenshots
 -----------
 
-.. figure:: images/Guided_Acquisition.png
+.. figure:: images/zurface_tool1.png
    :align: center
    :alt:
 
-.. figure:: images/Guided_Acquisition_Workflow.png
+.. figure:: images/zurface_tool2.png
    :align: center
    :alt:
 
-.. figure:: images/Guided_Acquisition_schematic.png
+.. figure:: images/zurface_tool3.png
+   :align: center
+   :alt:
+
+.. figure:: images/zurface_tool4.png
    :align: center
    :alt:
 
