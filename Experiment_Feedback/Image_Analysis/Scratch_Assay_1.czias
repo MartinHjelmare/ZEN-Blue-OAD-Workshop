@@ -5,6 +5,8 @@
   <TileSize>0</TileSize>
   <MaxParticleSize>0</MaxParticleSize>
   <MaxDisplaySize>3500</MaxDisplaySize>
+  <HiliteColor>#FFFF0000</HiliteColor>
+  <HiliteLineWidth>1</HiliteLineWidth>
   <Script Name="Builtin Multichannel">
     <SegmenterSource>SegmenterBuiltinDefault</SegmenterSource>
   </Script>
@@ -12,92 +14,80 @@
   <RegionClass Name="Root" Id="0">
     <Type>Or</Type>
     <Color>#FFFFFFFF</Color>
-    <Overlap>60</Overlap>
-    <RegionClass Name="AllParticles" Id="1">
+    <RegionClass Name="Scratch" Id="1">
       <Type>Collection</Type>
-      <Color>#FFB40000</Color>
-      <Overlap>60</Overlap>
+      <Color>#FFFF0000</Color>
       <ParametersCollection>
         <Parameters Key="Segmentation" Name="SegmenterClassBuiltinDefault" />
       </ParametersCollection>
       <Features>
         <Features>
-          <Feature Name="RegionsCount" IsDisplayEnabled="true" />
-          <Feature Name="ImageAcquisitionTime" />
-          <Feature Name="ImageIndexTime" />
+          <Feature Name="ImageSceneContainerName" />
+          <Feature Name="ImageSceneColumn" />
+          <Feature Name="ImageSceneRow" />
           <Feature Name="ImageStageXPosition" />
           <Feature Name="ImageStageYPosition" />
+          <Feature Name="RegionsAreaPercentage" />
+          <Feature Name="RegionsArea" />
+          <Feature Name="RegionsCount" />
+          <Feature Name="ImageIndexTime" />
+          <Feature Name="ImageRelativeTime" />
         </Features>
       </Features>
-      <RegionClass Name="SingleParticle" Id="2">
+      <RegionClass Name="SingleScratch" Id="2">
         <Type>Single</Type>
-        <ChannelName>EGFP</ChannelName>
-        <Color>#FF00CCFF</Color>
+        <ChannelName>Phase</ChannelName>
+        <Color>#FFFF6600</Color>
         <Overlap>60</Overlap>
         <ParametersCollection>
-          <Parameters Key="Segmentation" Name="SegmenterClassBuiltinDefault">
-            <Parameter Key="Smoothing1">
-              <Source>Smoothing</Source>
-              <IsInteractive>false</IsInteractive>
-              <Mode>Median</Mode>
-              <LowpassKernelSize>3</LowpassKernelSize>
-              <MedianKernelSize>3</MedianKernelSize>
-              <GaussSigma>2</GaussSigma>
+          <Parameters Key="Segmentation" Name="SegmenterClassVariance">
+            <Parameter Key="Variance1">
+              <Name>Variance</Name>
+              <Source>KernelSize</Source>
+              <Minimum>3</Minimum>
+              <Value>23</Value>
+              <Maximum>31</Maximum>
+              <SmallChange>1</SmallChange>
             </Parameter>
-            <Parameter Key="Sharpening1">
-              <Source>Sharpening</Source>
-              <MustExecute>false</MustExecute>
+            <Parameter Key="VarianceThrs1">
+              <Name>@ImageAnalysisWizard_SegmentationTwoThresholds</Name>
+              <Source>RangeImage</Source>
+              <Minimum>0</Minimum>
+              <ValueLower>10</ValueLower>
+              <ValueUpper>300</ValueUpper>
+              <Maximum>32768</Maximum>
+              <SmallChange>1</SmallChange>
+              <MinMaxMode>1</MinMaxMode>
+            </Parameter>
+            <Parameter Key="DilateSize1">
+              <Name>@ImageAnalysisWizard_SegmentationDilateSize</Name>
+              <Source>Integer</Source>
               <IsInteractive>false</IsInteractive>
-              <Mode>None</Mode>
-              <DelineateThreshold>0</DelineateThreshold>
-              <DelineateSize>1</DelineateSize>
-              <UnsharpRadius>2</UnsharpRadius>
-              <UnsharpStrength>1</UnsharpStrength>
+              <Minimum>0</Minimum>
+              <Value>4</Value>
+              <Maximum>10</Maximum>
+              <SmallChange>1</SmallChange>
             </Parameter>
             <Parameter Key="MinArea1">
+              <Name>MinArea1</Name>
               <Source>MinArea</Source>
               <IsInteractive>false</IsInteractive>
               <Minimum>1</Minimum>
-              <Value>50</Value>
-              <Maximum>1000</Maximum>
+              <Value>2000</Value>
+              <Maximum>5000</Maximum>
               <SmallChange>1</SmallChange>
-            </Parameter>
-            <Parameter Key="ThresholdHistogram1">
-              <Source>ThresholdHistogram</Source>
-              <Minimum1>0</Minimum1>
-              <ValueLower1>53</ValueLower1>
-              <ValueUpper1>249</ValueUpper1>
-              <Maximum1>255</Maximum1>
-              <Minimum2>0</Minimum2>
-              <ValueLower2>0</ValueLower2>
-              <ValueUpper2>0</ValueUpper2>
-              <Maximum2>255</Maximum2>
-              <Minimum3>0</Minimum3>
-              <ValueLower3>0</ValueLower3>
-              <ValueUpper3>0</ValueUpper3>
-              <Maximum3>255</Maximum3>
-              <IsHLS>false</IsHLS>
-              <IsValid1>true</IsValid1>
-              <IsValid2>false</IsValid2>
-              <IsValid3>false</IsValid3>
-              <AnalysisThresholdMode>Automatic</AnalysisThresholdMode>
-              <AutomaticThresholdMethod>TriangleThreshold</AutomaticThresholdMethod>
-              <AnalysisThresholdShapeMode>Polygon</AnalysisThresholdShapeMode>
-              <PickSize>1</PickSize>
-              <PickTolerance>3</PickTolerance>
             </Parameter>
             <Parameter Key="Fill1">
               <Name>@ImageAnalysisWizard_SegmentationFill</Name>
               <Source>Boolean</Source>
               <IsInteractive>false</IsInteractive>
-              <Value>false</Value>
+              <Value>true</Value>
             </Parameter>
-            <Parameter Key="Separate1">
-              <Source>Separate</Source>
-              <MustExecute>false</MustExecute>
+            <Parameter Key="SuppressSubBlockBorder1">
+              <Name>Suppress Border</Name>
+              <Source>Boolean</Source>
               <IsInteractive>false</IsInteractive>
-              <Mode>None</Mode>
-              <Count>3</Count>
+              <Value>true</Value>
             </Parameter>
           </Parameters>
         </ParametersCollection>
@@ -123,42 +113,33 @@
         </Conditions>
         <Features>
           <Features>
-            <Feature Name="ID" IsDisplayEnabled="true" />
-            <Feature Name="CenterX" />
-            <Feature Name="CenterY" />
-            <Feature Name="IntensityMean" ChannelName="EGFP" />
-            <Feature Name="BoundCenterXStage" />
-            <Feature Name="BoundCenterYStage" />
+            <Feature Name="ID" />
+            <Feature Name="Area" />
+            <Feature Name="Perimeter" />
           </Features>
         </Features>
-        <DrawFeatures>
-          <Features>
-            <Feature Name="DrawCenter" IsDisplayEnabled="true" />
-          </Features>
-        </DrawFeatures>
       </RegionClass>
     </RegionClass>
   </RegionClass>
   <RegionClassTemplate Name="RootTemplate" Id="0">
     <Type>Or</Type>
     <Color>#FFFFFFFF</Color>
-    <Overlap>60</Overlap>
-    <RegionClass Name="Classes" Id="11">
+    <RegionClass Name="Classes" Id="1">
       <Type>Collection</Type>
-      <Color>#FFB40000</Color>
-      <Overlap>60</Overlap>
+      <Color>#FFFF0000</Color>
       <Features>
         <Features>
           <Feature Name="RegionsCount" />
         </Features>
       </Features>
-      <RegionClass Name="Class" Id="12">
+      <RegionClass Name="Class" Id="2">
         <Type>Single</Type>
         <Color>#FFFF0000</Color>
         <Overlap>60</Overlap>
         <ParametersCollection>
           <Parameters Key="Segmentation" Name="SegmenterClassBuiltinDefault">
             <Parameter Key="Smoothing1">
+              <Name>Smoothing1</Name>
               <Source>Smoothing</Source>
               <MustExecute>false</MustExecute>
               <IsInteractive>false</IsInteractive>
@@ -168,6 +149,7 @@
               <GaussSigma>1.3</GaussSigma>
             </Parameter>
             <Parameter Key="Sharpening1">
+              <Name>Sharpening1</Name>
               <Source>Sharpening</Source>
               <IsInteractive>false</IsInteractive>
               <Mode>None</Mode>
@@ -177,6 +159,7 @@
               <UnsharpStrength>1</UnsharpStrength>
             </Parameter>
             <Parameter Key="MinArea1">
+              <Name>MinArea1</Name>
               <Source>MinArea</Source>
               <IsInteractive>false</IsInteractive>
               <Minimum>1</Minimum>
@@ -185,6 +168,7 @@
               <SmallChange>1</SmallChange>
             </Parameter>
             <Parameter Key="ThresholdHistogram1">
+              <Name>ThresholdHistogram1</Name>
               <Source>ThresholdHistogram</Source>
               <Minimum1>0</Minimum1>
               <ValueLower1>0</ValueLower1>
@@ -215,6 +199,7 @@
               <Value>false</Value>
             </Parameter>
             <Parameter Key="Separate1">
+              <Name>Separate1</Name>
               <Source>Separate</Source>
               <IsInteractive>false</IsInteractive>
               <Mode>None</Mode>
@@ -226,7 +211,7 @@
           <Parameter Key="RegionEdit1">
             <Source>RegionEdit</Source>
             <IsInteractive>false</IsInteractive>
-            <EditMethod>None</EditMethod>
+            <EditMethod>Draw</EditMethod>
           </Parameter>
           <Parameter Key="RegionGrow1">
             <Source>RegionGrow</Source>
@@ -263,10 +248,10 @@
     </AnalysisStep>
     <AnalysisStep Name="Segmentation">
       <MustExecute>true</MustExecute>
-      <IsInteractive>false</IsInteractive>
+      <IsInteractive>true</IsInteractive>
     </AnalysisStep>
     <AnalysisStep Name="Condition">
-      <MustExecute>false</MustExecute>
+      <MustExecute>true</MustExecute>
       <IsInteractive>false</IsInteractive>
     </AnalysisStep>
     <AnalysisStep Name="Interactive">
@@ -296,7 +281,7 @@
     <Source>AnalysisClassDefault</Source>
   </AnalysisClass>
   <MeasureFrame>
-    <FrameMode>Inside</FrameMode>
+    <FrameMode>Cut</FrameMode>
     <IsFrameMaximize>false</IsFrameMaximize>
     <Complement>false</Complement>
     <GraphicLayer>
