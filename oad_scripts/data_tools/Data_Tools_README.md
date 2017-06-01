@@ -2,7 +2,7 @@
 
 ### Batch_Export_OME_TIFF_XML_bfconvert_final.czmac
 
-![Screenshot of GUI](/images/Guided_Acquisition.png)
+![Screenshot of GUI](/images/export_bfconvert1.png)
 
 This tool allows
 * to split and export CZI files to OME-TIFF files
@@ -25,7 +25,7 @@ This tool allows
 
 ### Metadata_Report_Tool.czmac
 
-![Screenshot of GUI](/images/MetaData_Report_Tool1.png)
+![Screenshot of GUI](/images/MetaData_Report_Tools1.png)
 
 The tools extracts all important metadata and displays them as a:
 * ZenTable dirctly inside ZEN Blue
