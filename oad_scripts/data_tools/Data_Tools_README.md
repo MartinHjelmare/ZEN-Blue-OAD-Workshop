@@ -32,7 +32,7 @@ This tool allows
 
 ### Metadata_Report_Tool.czmac
 
-![Screenshot of GUI](/images/MetaData_Report_Tools1.png)
+![Screenshot of GUI](/images/MetaData_Report_Tool1.png)
 
 The tools extracts all important metadata and displays them as a:
 * ZenTable dirctly inside ZEN Blue
