@@ -12,13 +12,6 @@ This tool allows
 [BioFormat Commandline Tools](http://www.openmicroscopy.org/site/support/bio-formats5.5/users/comlinetools/index.html)
 
 
-### Batch_Export_OME_TIFF_final_Split_adv.czmac
-
-* Tool to simplify the export of CZI files to OME-TIFF using the built-in ZEN export tools
-
-![Screenshot of GUI](/images/Guided_Acquisition.png)
-
-
 ### Display_ZSurface_BF_Python.czmac
 
 [Screenshot of ZEN Blue with showing the tool UI](/images/zusurface_tool1.png)
