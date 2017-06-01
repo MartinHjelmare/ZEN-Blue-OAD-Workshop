@@ -105,11 +105,11 @@ class MyGUI(QtGui.QDialog):
             self.nodatacount = self.nodatacount + 1
 
         # close app and save figure if ... time no change was detected
-        if self.nodatacount > 5:
+        if self.nodatacount > 4:
             self.figure_widget.draw()
             # save figure before closing
-            time.sleep(5)
-            if saveopt == True:
+            time.sleep(3)
+            if saveopt == 'True':
                 self.figure_widget.figure.savefig(savename)
             sys.exit()
 
@@ -137,8 +137,8 @@ if __name__ == "__main__":
     print('Datalog Filename: ', args.filename)
 
     saveopt = args.saveoption
-    print('SaveOption : ', saveopt)
-    if saveopt == True:
+    print('SaveOption: ', saveopt)
+    if saveopt == 'True':
         savename = filename[:-4] + '.png'
         print('Savename: ', savename)
 
