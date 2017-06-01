@@ -6,7 +6,7 @@
 
 This tool allows to split and export CZI files to OME-TIFF files and it has the additional option to create OME-XML files. It is using the BioFormats command line tools which can be found here:
 
-[BioFormat Commandline Tools](http://www.openmicroscopy.org/site/support/bio-formats5.5/users/comlinetools/index.html)
+![BioFormat Commandline Tools](http://www.openmicroscopy.org/site/support/bio-formats5.5/users/comlinetools/index.html)
 
 
 ### Batch_Export_OME_TIFF_final_Split_adv.czmac
