@@ -1,47 +1,49 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Script Version="1.0">
-  <Language>Python</Language>
-  <Text>"""
-File: Analyze_Image_Plot_Pandas.czmac
+﻿"""
+File: Run_Experiment_Analyze_Image_Plot_Pandas.czmac
 Author: Sebastian Rhode
 Date: 2017_06_10
-Verison: 1.2
+Verison: 1.3
 """
 
 from System.Diagnostics import Process
 from System.IO import File, Path, Directory
 
 # clear output
+Zen.Application.Documents.RemoveAll(False)
 Zen.Application.MacroEditor.ClearMessages()
+# define output folder
+outputpath = r'c:\Output'
 
-# load image and add it to ZEN and get the image path
-image_to_analyze = r'c:\Python_ZEN_Output\well96_1Pos.czi'
-image = Zen.Application.LoadImage(image_to_analyze)
-Zen.Application.Documents.Add(image)
-outputpath = Path.GetDirectoryName(image_to_analyze)
-resultname = Path.GetFileNameWithoutExtension(image.Name)
+# initialize Zen experiment and run it
+experiment_filename = r'ML_96_Wellplate_Castor.czexp'
+exp = ZenExperiment()
+exp.Load(experiment_filename)
+image2analyze = Zen.Acquisition.Execute(exp)
+# save the image
+savename = Path.GetFileNameWithoutExtension(experiment_filename) + '.czi'
+image2analyze.Save(Path.Combine(outputpath, savename))
 
 # define the image analysis setting and run the image analysis on the active image
-iasfilename = r'c:\Users\M1SRH\Documents\Carl Zeiss\ZEN\Documents\Image Analysis Settings\Count_Cells_DAPI_96well.czias'
+iafilename = r'c:\Users\M1SRH\Documents\Carl Zeiss\ZEN\Documents\Image Analysis Settings\Count_Cells_DAPI_96well.czias'
 ias = ZenImageAnalysisSetting()
-ias.Load(iasfilename)
-Zen.Analyzing.Analyze(image,ias)
+ias.Load(iafilename)
+Zen.Analyzing.Analyze(image2analyze,ias)
 
 # Create data list with results for all regions (e.g. all nuclei)
-table_all = Zen.Analyzing.CreateRegionsTable(image)
+table_all = Zen.Analyzing.CreateRegionsTable(image2analyze)
 Zen.Application.Documents.Add(table_all)
 # Create data list with results for each region (e.g. every single nucleus)
-table_single = Zen.Analyzing.CreateRegionTable(image)
+table_single = Zen.Analyzing.CreateRegionTable(image2analyze)
 Zen.Application.Documents.Add(table_single)
 
 # Save both data lists as CSV files
-table_all_filename = Path.Combine(outputpath, resultname + '_All.csv')
+table_all_filename = Path.Combine(outputpath, image2analyze.Name[:-4] + '_All.csv')
 table_all.Save(table_all_filename)
-table_single_filename = Path.Combine(outputpath,  resultname + '_Single.csv')
+table_single_filename = Path.Combine(outputpath, image2analyze.Name[:-4] + '_Single.csv')
 table_single.Save(table_single_filename)
 
 # close the image and image analysis setting
-#image.Close()
+#image2analyze.Close()
 ias.Close()
 
 # define the external plot script or tool
@@ -62,8 +64,8 @@ app.StartInfo.Arguments = script + params
 app.Start()
 app.WaitForExit()
 
-savename_all =  Path.Combine(Path.GetDirectoryName(image_to_analyze), Path.GetFileNameWithoutExtension(image_to_analyze) + '_Single_HM_all.png')
-savename_single = Path.Combine(Path.GetDirectoryName(image_to_analyze), Path.GetFileNameWithoutExtension(image_to_analyze) + '_Single_HM_' + parameter2display + '.png')
+savename_all =  Path.Combine(outputpath, Path.GetFileNameWithoutExtension(savename) + '_Single_HM_all.png')
+savename_single = Path.Combine(outputpath, Path.GetFileNameWithoutExtension(savename) + '_Single_HM_' + parameter2display + '.png')
 
 print 'Showing saved figure in ZEN.'
 
@@ -76,15 +78,3 @@ else:
     print 'Saved figure not found.'
 
 print 'Done.'
-</Text>
-  <Author></Author>
-  <Description></Description>
-  <ApplicationName></ApplicationName>
-  <Keywords></Keywords>
-  <Row>41</Row>
-  <Column>2</Column>
-  <WatchVariables>
-    <Watch>savename_all</Watch>
-    <Watch>savename_single</Watch>
-  </WatchVariables>
-</Script>

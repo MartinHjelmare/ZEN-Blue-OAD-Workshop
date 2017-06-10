@@ -1,7 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Script Version="1.0">
-  <Language>Python</Language>
-  <Text>"""
+﻿"""
 File: Analyze_Image_Plot_Pandas.czmac
 Author: Sebastian Rhode
 Date: 2017_06_10
@@ -76,15 +73,3 @@ else:
     print 'Saved figure not found.'
 
 print 'Done.'
-</Text>
-  <Author></Author>
-  <Description></Description>
-  <ApplicationName></ApplicationName>
-  <Keywords></Keywords>
-  <Row>41</Row>
-  <Column>2</Column>
-  <WatchVariables>
-    <Watch>savename_all</Watch>
-    <Watch>savename_single</Watch>
-  </WatchVariables>
-</Script>
