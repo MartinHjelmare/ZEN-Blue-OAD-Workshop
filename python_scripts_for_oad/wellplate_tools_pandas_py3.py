@@ -10,29 +10,28 @@ from ipy_progressbar import ProgressBar
 import os
 
 
-
 def extract_labels(nr, nc):
     """
     Define helper function to be able to extract the well labels depending
     on the actual wellplate type. Currently supports 96, 384 and 1536 well plates.
 
     :param nr: number of rows of the wellplate, e.g. 8 (A-H) for a 96 wellplate
-    :param nc: number of columns of the wellplate, e.g. 8 (112) for a 96 wellplate
+    :param nc: number of columns of the wellplate, e.g. 12 (1-12) for a 96 wellplate
     :return: lx, ly are list containing the actual row and columns IDs
     """
-    
-    # labeling schemes        
+
+    # labeling schemes
     labelX = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12',
               '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',
               '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36',
               '37', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48',]
-    
+
     labelY = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
               'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'AA', 'AB', 'AC', 'AD', 'AE', 'AF']
-    
+
     lx = labelX[0:nc]
     ly = labelY[0:nr]
-    
+
     return lx, ly
 
 
@@ -48,11 +47,11 @@ def convert_row_index(rowid):
 
     rowids = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
               'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'AA', 'AB', 'AC', 'AD', 'AE', 'AF']
-                
+
     # add one since the index in Python is zero-based
     # the column or row index from ZEN IAS is one-based
     rowindex = rowids.index(rowid) + 1
-    
+
     return rowindex
 
 
@@ -68,10 +67,10 @@ def get_well_all_parameters(df, wellid, colname='all'):
     """
 
     new_df = df.loc[df['WellID'] == wellid]
-    
+
     if colname != 'all':
         new_df = new_df[['WellID', 'RowID', 'ColumnID', colname]]
-    
+
     return new_df
 
 
@@ -86,7 +85,7 @@ def get_well_row(df, rowid):
 
     rowindex = convert_row_index(rowid)
     df_row = df.loc[df['RowID'] == rowindex]
-    
+
     return df_row
 
 
@@ -105,15 +104,15 @@ def create_heatmap_old(nr, nc, df, colname):
     """
 
     hm = np.full([nr, nc], np.nan)
-    
+
     for i in range(0, df.shape[0]):
         # update well matrix at the correct position - indices have to be integers ...
         hm[int(df['RowID'][i+1]-1), int(df['ColumnID'][i+1]-1)] = df[colname][i+1]
-        
+
     # get the labels for a 96 well plate and create a data frame from the numpy array
     lx, ly = extract_labels(nr, nc)
     heatmap_df = pd.DataFrame(hm, index=ly, columns=lx)
-    
+
     return heatmap_df
 
 
@@ -165,11 +164,11 @@ def create_heatmap_from_dict(hmdict, paramkey):
     hmarray = hmdict[paramkey]
     nr = hmarray.shape[0]
     nc = hmarray.shape[1]
-        
+
     # get the labels for a 96 well plate and create a data frame from the numpy array
     lx, ly = extract_labels(nr, nc)
     heatmap_df_key = pd.DataFrame(hmarray, index=ly, columns=lx)
-    
+
     return heatmap_df_key
 
 
@@ -229,15 +228,15 @@ def rename_col_fromcsv_all(df):
                        df.columns[4]: 'CellNumber',
                        df.columns[5]: 'DAPI_MeanInt',
                        df.columns[6]: 'DAPI_MeanArea'}, inplace=True)
-    
+
     # convert columns to numeric types when possible, since there might be issues
     # determine the correct data types for some columns
     df = df.convert_objects(convert_numeric=True)
-    
+
     # convert columns to numeric types when possible --> convert to float
     df['DAPI_MeanInt'] = df['DAPI_MeanInt'].str.replace(',', '.').astype('float')
     df['DAPI_MeanArea'] = df['DAPI_MeanArea'].str.replace(',', '.').astype('float')
-    
+
     return df
 
 
@@ -249,18 +248,18 @@ def rename_col_fromcsv_single(dfs, paramlist):
 
     Important is to check for the order of the columns inside the CSV table.
     If this order is changes the renaming function must be adapted accordingly.
-    
+
     Convention for the ZEN Image Analysis Parameters order:
 
-    WellID - RowID - ColumnID - ID - Index - Param1 - Param2 - ...    
-    
-    WHEN THIS CONVENTION IS NOT USED, THE FOLLOWING CODE WILL NOT WORK AS EXPECTED. 
-    
+    WellID - RowID - ColumnID - ID - Index - Param1 - Param2 - ...
+
+    WHEN THIS CONVENTION IS NOT USED, THE FOLLOWING CODE WILL NOT WORK AS EXPECTED.
+
     :param dfs - dataframe containing all features for single objects (SingleRegions)
     :param paramlist - list containing the desired column names (short version)
     :return: dfs - dataframe with shorter columns names and correct data types.
     """
-    
+
     # delete unneeded rows --> contains the units
     dfs = dfs.drop([0])
     # rename columns
@@ -271,7 +270,7 @@ def rename_col_fromcsv_single(dfs, paramlist):
                         dfs.columns[4]: 'Index'}, inplace=True)
 
     for i in range(0, len(paramlist)):
-        
+
         # rename the columns with measured parameters and correct types
         dfs.rename(columns={dfs.columns[i+5]: paramlist[i]}, inplace=True)
         try:
@@ -279,13 +278,13 @@ def rename_col_fromcsv_single(dfs, paramlist):
         except:
             print('No correction of types possible for parameter: ', paramlist[i])
 
-    
+
     # # convert columns to numeric types to avaoid problems with the data types and decimal separators
     # dfs['DAPI_Mean'] = dfs['DAPI_Mean'].str.replace(',', '.').astype('float')
     # dfs['Area'] = dfs['Area'].str.replace(',', '.').astype('float')
     # dfs['Perimeter'] = dfs['Perimeter'].str.replace(',', '.').astype('float')
     # dfs['Roundness'] = dfs['Roundness'].str.replace(',', '.').astype('float')
-    
+
     return dfs
 
 
@@ -300,20 +299,20 @@ def create_heatmap_list_arrays(numparams, nr, nc):
         :param nc - number of columns for wellplate
         :return: heatmaplist_array - list of arrays representing the measures parameters plus obne for the object number
         """
-        
+
         heatmaplist_array = []
-    
+
         for i in range(0, numparams+1):
             # create list containing all heatmaps for number of objects + all measured parameters
             heatmaplist_array.append(np.full([nr, nc], np.nan))
-            
+
         return heatmaplist_array
 
 
 def fill_heatmaps(dfs, numparams, nr, nc, statfunc='mean', showbar=False, verbose=True):
     """
     Create dictionary containing heatmaps (dataframes) for all measured parameters
-    
+
     1) Determine how many wells actually contain data
     2) Loop over all wells
     3) Extract only data fro current well from dataframe and calc statistics
@@ -340,13 +339,13 @@ def fill_heatmaps(dfs, numparams, nr, nc, statfunc='mean', showbar=False, verbos
 
     # get all wells containing some data
     wells_real = dfs['WellID'].value_counts()
-    
+
     if showbar == True:
         # initialize the progress bar
         pb = ProgressBar(len(wells_real), title='Processing Wells')
     elif showbar == False:
         pb = iter(range(len(wells_real)))
-    
+
     # iterate over all wells that were detected
     for i in pb:
     #for i in range(len(wells_real)):
@@ -371,10 +370,10 @@ def fill_heatmaps(dfs, numparams, nr, nc, statfunc='mean', showbar=False, verbos
 
         # fill heatmap dictionary
         for p in range(0, numparams+1):
-    
+
             # the 1st heatmap reserved for the object numbers
             if p == 0:
-    
+
                 num_objects_current_well = df_tmp.shape[0]
                 row = np.int(welldata_dict[current_wellid]['RowID'] - 1)
                 col = np.int(welldata_dict[current_wellid]['ColumnID'] - 1)
@@ -387,7 +386,7 @@ def fill_heatmaps(dfs, numparams, nr, nc, statfunc='mean', showbar=False, verbos
 
             # cycle through all measured parameters beside the object number
             elif p > 0:
-    
+
                 row = np.int(welldata_dict[current_wellid]['RowID'] - 1)
                 col = np.int(welldata_dict[current_wellid]['ColumnID'] - 1)
                 # index 0-4 must be skipped but p is already >=1
@@ -489,11 +488,11 @@ def showheatmap_all(heatmap_dict, subplots, fontsize_title=16, fontsize_label=12
 def getwellIDfromfilename(filename):
     """
     This function has to be adapted depending the choosen filename:
-    
+
     Example:
     ------------------------------------
     filename = nuc-B-04.tif
-    
+
     colid:  04
     colindex: 4
     rowid: B
@@ -514,20 +513,20 @@ def getwellIDfromfilename(filename):
     rowid = filename_base_woext[(wellcoldigits-2):(wellcoldigits-1)]
     rowindex = convert_row_index(rowid)
     wellid = rowid + str(colindex)
-    
+
     return wellid, rowindex, colindex
 
 
 def addWellinfoColumns(dataframe):
-    
+
     # add WellID, RowID and ColumnID to the existing dataframe
     dataframe.insert(0, 'WellID', 'A1')
     dataframe.insert(1, 'RowID', 1)
     dataframe.insert(2, 'ColumnID', 1)
-    
+
     return dataframe
-    
-    
+
+
 def wellinfo2dataframe(df, colname_with_info):
     """
     This function adds three additional columns to the beginning of the dataframe
@@ -535,10 +534,10 @@ def wellinfo2dataframe(df, colname_with_info):
     :param dataframe: input pandas dataframe
     :return: dataframe - modified dataframe
     """
-    
+
     # add wellinfo to the first 3 columns
     df = addWellinfoColumns(df)
-    
+
     for i in range(0, df.shape[0]):
 
         # get the well info based on the image filename for every row
@@ -549,3 +548,30 @@ def wellinfo2dataframe(df, colname_with_info):
         df.set_value(i, 'ColumnID', colindex)
 
     return df
+
+
+def getrowandcolumn(platetype):
+    """
+    :param platetype - number total wells of plate (6, 24, 96, 384 or 1536)
+    :return nr - number of rows of wellplate
+    :return nc - number of columns for wellplate
+    """
+    platetype = int(platetype)
+
+    if platetype == 6:
+        nr = 2
+        nc = 3
+    elif platetype == 24:
+        nr = 4
+        nc = 6
+    elif platetype == 96:
+        nr = 8
+        nc = 12
+    elif platetype == 384:
+        nr = 16
+        nc = 24
+    elif platetype == 1536:
+        nr = 32
+        nc = 48
+
+    return nr, nc
