@@ -1,7 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Script Version="1.0">
-  <Language>Python</Language>
-  <Text>"""
+﻿"""
 Author: Sebastian Rhode
 Date: 2016_09_26
 Version: 1.1
@@ -94,11 +91,3 @@ if plotpython == True:
     app.StartInfo.Arguments = script + params
     print 'Starting external plotting script: ', script
     app.Start()
-</Text>
-  <Author></Author>
-  <Description></Description>
-  <ApplicationName></ApplicationName>
-  <Keywords></Keywords>
-  <Row>25</Row>
-  <Column>18</Column>
-</Script>
