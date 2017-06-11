@@ -2,36 +2,30 @@
 
 ### Apotome Processing
 
-This script will automatically process the acquired ApoTome raw image, show the result and at the same time save the result in C:\ZEN_Output.
-
-To change the saving folder, open the script and adjust line 5
-To adjust some settings (though these are most general), adjust line 14
+* This script will automatically process the acquired ApoTome raw image, show the result and at the same time save the result in C:\ZEN_Output.
+* To change the saving folder, open the script and adjust line 5.
+* To adjust some settings (though these are most general), adjust line 14.
 
 ### Deconvolution
 
 This script will automatically deconvolve a z-stack with the Fast Iterative Lucy-Richardson algorithm (100 iterations). The result will be saved in C:\ZEN_Output.
 
-To make adjustments:
-
+* To make adjustments:
 1. Line 6 for output folder (always use double "\" to indicate subfolder
 2. Line 10 with regards to DCV Parameters
-
-To change these, open an image, go to Deconvolution parameters, make changes and save in a new czips-file (save in Parameters window). E.g. this script uses "Lucy_Richardson_DCV.czips".
+* To change these, open an image, go to Deconvolution parameters, make changes and save in a new czips-file (save in Parameters window). E.g. this script uses "Lucy_Richardson_DCV.czips".
 
 This file is stored in (change USERNAME to Windows login name):
 
-C:\Users\USERNAME\Documents\Carl Zeiss\ZEN\Documents\Processing Settings\DeconvolutionApplication
+**C:\Users\USERNAME\Documents\Carl Zeiss\ZEN\Documents\Processing Settings\DeconvolutionApplication**
 
 ### Image Analysis
 
 1. Copy "Analysis_Count_Cells_Active_Image.czmac" into "C:\Users\Public\Documents\Carl Zeiss\ZEN\Documents\Macros"
 2. Copy "Count_Cells.czias" into "C:\Users\Public\Documents\Carl Zeiss\ZEN\Documents\Image Analysis Settings"
-
-Data is saved in a folder on "C:\ZEN_Output". Before running the script, create the folder and/or rename its location in the macro (line 7).
-
-The script works on any single or multi-channel image as long as the first channel is the DAPI channel. Feel free to create your own script and rename the file & location in the macro accordingly (line 9).
-
-In ZEN Blue Pro/System, enable Automation, open this script in "After Acquisition". Once image acquisition is finished, it will run automatically and analyze the recently acquired image.
+* Data is saved in a folder on "C:\ZEN_Output". Before running the script, create the folder and/or rename its location in the macro (line 7).
+* The script works on any single or multi-channel image as long as the first channel is the DAPI channel. Feel free to create your own script and rename the file & location in the macro accordingly (line 9).
+* In ZEN Blue Pro/System, enable Automation, open this script in "After Acquisition". Once image acquisition is finished, it will run automatically and analyze the recently acquired image.
 
 ### Stitching
 
@@ -40,8 +34,8 @@ To make adjustments:
 
 1. Line 8 which refers to the file used for stitching parameters
 
-To change these, open an image, go to Stitching parameters, make changes and save in a new czips-file (save in Parameters window). E.g. this script uses "Stitching_Channel_1'.czips".
+* To change these, open an image, go to Stitching parameters, make changes and save in a new czips-file (save in Parameters window). E.g. this script uses "Stitching_Channel_1'.czips".
 
 This file is stored in (change USERNAME to Windows login name):
 
-C:\Users\USERNAME\Documents\Carl Zeiss\ZEN\Documents\Processing Settings\Stitching
+**C:\Users\USERNAME\Documents\Carl Zeiss\ZEN\Documents\Processing Settings\Stitching**
