@@ -4,9 +4,8 @@
 
 ![Screenshot of GUI](/images/export_bfconvert1.png)
 
-This tool allows
-* to split and export CZI files to OME-TIFF files
-* additional option to create OME-XML files
+* This tool allows to split and export CZI files to OME-TIFF files.
+* Has the additional option to create OME-XML files.
 * It is using the BioFormats command line tools which can be found here:
 
 [BioFormat Commandline Tools](http://www.openmicroscopy.org/site/support/bio-formats5.5/users/comlinetools/index.html)
@@ -36,7 +35,8 @@ The **PlaneData** can be also saved inside a CSV table.
 
 ![Screenshot of GUI](/images/MetaData_Report_Tool1.png)
 
-The tools extracts all important metadata and displays them as a:
-* ZenTable dirctly inside ZEN Blue
-* Saves it as CSV or TXT file
-* Opens Excel to fill in the metadata into an Excel Sheet
+The tools extracts all important metadata and:
+
+* displays them as a ZenTable directly inside ZEN Blue.
+* saves it as CSV or TXT file.
+* opens Excel to fill in the metadata into a sheet.
