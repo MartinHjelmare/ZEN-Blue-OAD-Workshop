@@ -1,4 +1,4 @@
-## OAD - General Concept and Key Features
+# OAD - General Concept and Key Features
 
 * **Open Application Development (OAD)** uses powerful **Python Scripts** to **simplify, customize** and **automate** your workflows.
 
@@ -8,7 +8,7 @@
 
 * Create **"smart"** experiments with **Experiment Feedback** and modify the acquisition **On-the-fly** based on **Online Image Analysis** and **External Inputs**.
 
-## OAD - Overview
+## OAD - Overview about interfaces
 
 ![OAD Overview](/images/OAD_Overview.png)
 
