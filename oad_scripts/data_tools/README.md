@@ -2,13 +2,17 @@
 
 ### Batch_Export_OME_TIFF_XML_bfconvert_final.czmac
 
-![Screenshot of GUI](/images/export_bfconvert1.png)
 
-* This tool allows to split and export CZI files to OME-TIFF files.
-* Has the additional option to create OME-XML files.
-* It is using the BioFormats command line tools which can be found here:
+* **This tool allows to split and export CZI files to OME-TIFF files.**
+* **Has the additional option to create OME-XML files.**
+* **It is using the BioFormats command line tools which can be found here:**
 
 [BioFormat Commandline Tools](http://www.openmicroscopy.org/site/support/bio-formats5.5/users/comlinetools/index.html)
+
+
+![Screenshot of GUI](/images/export_bfconvert1.png)
+
+
 
 
 ### Display_ZSurface_BF_Python.czmac
