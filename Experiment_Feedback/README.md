@@ -1,10 +1,6 @@
-## Experiment Feedback
+# Experiment Feedback
 
-Experiment feedback (conditional or adaptive experiments) allows the defnition of specifc rules and actions to be performed during an experiment. This allows changing
-the course of an experiment depending on the current system status or the nature of
-the acquired data on runtime. Moreover, it is possible to integrate certain tasks like
-data logging or starting an external application, directly into the imaging experiment.
-Typically, but not exclusively, such an experiment connects the image pickup with an
+Experiment feedback (conditional or adaptive experiments) allows the defnition of specifc rules and actions to be performed during an experiment. This allows changing the course of an experiment depending on the current system status or the nature of the acquired data on runtime. Moreover, it is possible to integrate certain tasks like data logging or starting an external application, directly into the imaging experiment. Typically, but not exclusively, such an experiment connects the image pickup with an
 automatic image analysis.
 
 * **Adaptive Acquisition Engine** allows modifying **running experiments** using Python scripts.
