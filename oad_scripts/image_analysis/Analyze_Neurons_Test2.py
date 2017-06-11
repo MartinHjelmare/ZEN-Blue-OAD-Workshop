@@ -1,7 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Script Version="1.0">
-  <Language>Python</Language>
-  <Text>"""  
+"""
 Author: Sebastian Rhode
 Date: 2017_03_03
 File: Analyze_Neurons_Test2.czmac
@@ -54,7 +51,7 @@ if runpipes['1'][0]:
     out1 = st.AutoThreshold(out1, method=ZenThresholdingMethod.TriangleThreshold, createBinary=True, invertResult=False, id=pipe, showresult=False)
     out1 = st.FillHoles(out1, id=pipe, showresult=True)
 
-    
+
 
 if runpipes['2'][0]:
     # pipeline 2
@@ -63,12 +60,3 @@ if runpipes['2'][0]:
     print 'Combining images using OR ...'
     out2 = Zen.Processing.Binary.Or(out1, out0, False)
     out2 = st.Scrap(out2, minarea=50, maxarea=100000, inrange=True, id=pipe, showresult=True)
-
-</Text>
-  <Author></Author>
-  <Description></Description>
-  <ApplicationName></ApplicationName>
-  <Keywords></Keywords>
-  <Row>38</Row>
-  <Column>114</Column>
-</Script>

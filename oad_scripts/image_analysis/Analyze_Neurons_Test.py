@@ -1,7 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Script Version="1.0">
-  <Language>Python</Language>
-  <Text>"""  
+﻿"""  
 Author: Sebastian Rhode
 Date: 2017_03_03
 File: SegmentationPipeline.czmac
@@ -214,12 +211,3 @@ if runpipes['3'][0]:
     out3 = Zen.Processing.Binary.Or(out2, out0, False)
     out3 = Zen.Processing.Binary.Or(out3, out1, False)
     out3 = Scrap(out3, minarea=50, maxarea=100000, inrange=True, id=pipe, showresult=True)
-
-</Text>
-  <Author></Author>
-  <Description></Description>
-  <ApplicationName></ApplicationName>
-  <Keywords></Keywords>
-  <Row>179</Row>
-  <Column>39</Column>
-</Script>
