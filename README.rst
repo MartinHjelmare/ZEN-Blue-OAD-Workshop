@@ -21,10 +21,6 @@ Requirements
 * `BioFormatsRead Scripts (optional) <https://github.com/sebi06/BioFormatsRead>`_
 * `MATLAB (optional) <https://www.mathworks.com/products/matlab.html>`_
 
-Notes
------
-XXX
-
 Acknowledgements
 ----------------
 *   The ZEN Reserach & Developemt Team
