@@ -1,5 +1,7 @@
 # Data Tools
 
+Collection of tools that deal with various aspects of image metadata. Some require additional software to create the shwos graphs.
+
 ## Batch_Export_OME_TIFF_XML_bfconvert_final.czmac
 
 * **This tool allows to split and export CZI files to OME-TIFF files.**
