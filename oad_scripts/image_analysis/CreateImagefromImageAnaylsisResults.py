@@ -1,7 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Script Version="1.0">
-  <Language>Python</Language>
-  <Text>"""  
+﻿"""  
 Author: Sebastian Rhode
 Date: 2016_09_05
 File: CreateImagefromImageAnaylsisResults.czmac
@@ -45,15 +42,3 @@ Zen.Application.Documents.Add(out)
 chName = image.Metadata.ChannelsText
 # set channelname for output image
 out.SetChannelName(0, chName)
-</Text>
-  <Author></Author>
-  <Description></Description>
-  <ApplicationName></ApplicationName>
-  <Keywords></Keywords>
-  <Row>44</Row>
-  <Column>23</Column>
-  <WatchVariables>
-    <Watch>ias</Watch>
-    <Watch>out1</Watch>
-  </WatchVariables>
-</Script>
