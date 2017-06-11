@@ -2,18 +2,13 @@
 
 ### Batch_Export_OME_TIFF_XML_bfconvert_final.czmac
 
-
 * **This tool allows to split and export CZI files to OME-TIFF files.**
 * **Has the additional option to create OME-XML files.**
 * **It is using the BioFormats command line tools which can be found here:**
 
 [BioFormat Commandline Tools](http://www.openmicroscopy.org/site/support/bio-formats5.5/users/comlinetools/index.html)
 
-
 ![Screenshot of GUI](/images/export_bfconvert1.png)
-
-
-
 
 ### Display_ZSurface_BF_Python.czmac
 
@@ -34,13 +29,12 @@ The **PlaneData** can be also saved inside a CSV table.
 
 ![The PlaneData from the CSV file in Excel](/images/zsurface_tool4.png)
 
-
 ### Metadata_Report_Tool.czmac
-
-![Screenshot of GUI](/images/MetaData_Report_Tool1.png)
 
 The tools extracts all important metadata and:
 
-* displays them as a ZenTable directly inside ZEN Blue.
-* saves it as CSV or TXT file.
-* opens Excel to fill in the metadata into a sheet.
+* **displays them as a ZenTable directly inside ZEN Blue.**
+* **saves it as CSV or TXT file.**
+* **opens Excel to fill in the metadata into a sheet.**
+
+![Screenshot of GUI](/images/MetaData_Report_Tool1.png)
