@@ -23,7 +23,7 @@ Requirements
 
 Acknowledgements
 ----------------
-*   The ZEN Reserach & Developemt Team
+*   The ZEN Research & Developemt Team
 
 References
 ----------
