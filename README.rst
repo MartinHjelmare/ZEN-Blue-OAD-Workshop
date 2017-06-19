@@ -23,7 +23,9 @@ Requirements
 
 Acknowledgements
 ----------------
-*   The ZEN Research & Developemt Team
+*   The ZEN Software Developemt Team
+*   The Python Community
+*   The BioFormats Team 
 
 References
 ----------
@@ -53,4 +55,4 @@ Disclaimer
 
 :Author: Sebastian Rhode
 
-:Version: 2017.05.02
+:Version: 2017.07.20
