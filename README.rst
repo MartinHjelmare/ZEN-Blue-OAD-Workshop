@@ -41,7 +41,7 @@ Screenshots
    :align: center
    :alt:
 
-.. figure:: images/Guided_Acquisition_Workflow.png
+.. figure:: images/Guided_Acquisition_WorkFlow.png
    :align: center
    :alt:
 
