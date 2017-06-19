@@ -13,6 +13,10 @@ Since that linkage and the automation of such workflows becomes increasingly ZEN
 
 The workshop will give an overview about the various options and use cases allowing the user to start automating their workflows. Different examples will be explained in detail and during hands-on sessions.
 
+.. figure:: images/ZEN_OAD_Tools_Slide.png
+   :align: center
+   :alt:
+
 
 Requirements
 ----------------------
