@@ -9,7 +9,7 @@ Since that linkage and the automation of such workflows becomes increasingly ZEN
 *    Open CZI image data format and its APIs
 *    Python Scripting (OAD Simple API) 
 *    Interfaces to ZEN (TCP-IP, COM, Extensions)
-*    Experiment Feedback (Adaptive Acaquistion with Online Image Analysis)   
+*    Experiment Feedback (Adaptive Acquistion with Online Image Analysis)   
 
 The workshop will give an overview about the various options and use cases allowing the user to start automating their workflows. Different examples will be explained in detail and during hands-on sessions.
 
