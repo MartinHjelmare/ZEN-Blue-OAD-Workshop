@@ -49,7 +49,7 @@ Screenshots
    :align: center
    :alt:
    
-.. figure:: images/20160329_ExpFeedback_Workflow_SRh.png
+.. figure:: images/20160329_ExpFeedback_Basic_Workflow.png
    :align: center
    :alt:
 
