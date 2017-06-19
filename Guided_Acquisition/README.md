@@ -3,7 +3,7 @@
 For a growing number of applications, it will be crucial to acquire data in a smart
 way. One way to achieve this goal is to build a smart microscope, which essentially
 means creating smart software workﬂows to control the hardware based on image analysis
-results.
+results (Actionable Information).
 
 Idea or Task:
 
