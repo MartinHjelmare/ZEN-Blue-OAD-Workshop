@@ -48,6 +48,10 @@ Screenshots
 .. figure:: images/Guided_Acquisition_schematic.png
    :align: center
    :alt:
+   
+.. figure:: images/20160329_ExpFeedback_Workflow_SRh.png
+   :align: center
+   :alt:
 
 Disclaimer
 ----------
