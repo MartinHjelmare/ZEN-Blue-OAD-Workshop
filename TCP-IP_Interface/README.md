@@ -40,8 +40,9 @@ used. Second, the commands sent to ZEN driving the imaging software are the same
 are used within a macro. Therefore the commands can be easily tested within the Macro
 Environment before they are used to send them via TCP/IP. In addition to that several
 macros can be written and saved within the ZEN Macro Environment. Each of these macros
-can be executed via TCP/IP by sending ‘run macroname’. In most cases this very easy
-approach already fulfills the needs of customers to acquire an image and to do image
+can be executed via TCP/IP by sending ‘run macroname’.
+
+In most cases this very easy approach already fulfills the needs of customers to acquire an image and to do image
 processing or analysis afterwards. Typically the macro saves the data to a special location
 where the next step of the workflow expect them to be. In the following workflow step otherprocessing
 and analysis software packages may work with the data or a feeder is driven by the workflow system to
