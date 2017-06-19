@@ -31,3 +31,7 @@ criteria. Therefore this kind of application requires three major tasks:
 object.
 
 ![Guided_Acquisition_WorkFlow](/images/Guided_Acquisition_WorkFlow.png)
+
+## OAD User Dialog for Guided Acquistion
+
+![Guided_Acquisition_WorkFlow Dialog](/images/Guided_Acquisition_Dialog_anno.png)
