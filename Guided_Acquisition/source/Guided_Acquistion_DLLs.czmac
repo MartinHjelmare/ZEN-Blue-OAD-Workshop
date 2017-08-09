@@ -7,7 +7,7 @@ Date: 2017_08_06
 File: Guided_Acquistion_DLLs.czmac
 Version: 4.3
 
-Optimzed for the use with Celldiscoverer 7 and DF2.
+Optimized for the use with Celldiscoverer 7 and DF2, but applicable for all motorized stands ruuning in ZEN Blue.
 Please adapt Focussing commands, especially FindSurface when using with other stands
 
 1) - Select Overview Scan Experiment
@@ -83,7 +83,7 @@ Zen.Application.MacroEditor.ClearMessages()
 # check the location of folder where experiment setups and image analysis settings are stored
 docfolder =  Zen.Application.Environment.GetFolderPath(ZenSpecialFolder.UserDocuments)
 #imgfolder =  Zen.Application.Environment.GetFolderPath(ZenSpecialFolder.ImageAutoSave)
-imgfolder = r'c:\Output\Guided_Acquistion'
+imgfolder = r'c:\Output\Guided_Acquisition'
 format = '%Y-%m-%d_%H-%M-%S'
 
 # get list with all existing experiments and image analysis setup
