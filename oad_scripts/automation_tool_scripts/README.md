@@ -39,3 +39,8 @@ To make adjustments:
 This file is stored in (change USERNAME to Windows login name):
 
 **C:\Users\USERNAME\Documents\Carl Zeiss\ZEN\Documents\Processing Settings\Stitching**
+
+
+### Multiblock TimeStitching
+
+This script automatically performs Time-stitching of Multi-block images acquired withbthe experiment designer. 
